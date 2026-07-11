@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; background: #0b0b0d; font-family: "Inter", sans-serif; color: #f5f4f0; overflow: hidden; position: relative; }
+  .floor { position: absolute; inset: 0; top: 55%; background-image: linear-gradient(rgba(255,255,255,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.09) 1px, transparent 1px); background-size: 44px 44px; transform: perspective(500px) rotateX(58deg) scale(1.9); transform-origin: top center; -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 80%); }
+  .box { position: relative; z-index: 2; padding: 72px 84px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+  .logo { display: flex; align-items: center; gap: 16px; font-weight: 700; font-size: 34px; letter-spacing: -0.02em; }
+  .m1 { display: inline-flex; gap: 5px; align-items: center; }
+  .m1 i { display: inline-block; width: 9px; height: 20px; background: #c7f94e; border-radius: 4.5px; transform: skewX(-14deg) translateY(-6px); }
+  .m1 i + i { height: 28px; transform: skewX(-14deg) translateY(6px); }
+  h1 { font-size: 74px; font-weight: 600; line-height: 1.02; letter-spacing: -0.04em; max-width: 17ch; }
+  h1 .accent { color: #c7f94e; }
+  .bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+  .tag { font-family: "JetBrains Mono", monospace; font-size: 17px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a90; }
+  .url { font-family: "JetBrains Mono", monospace; font-size: 24px; font-weight: 500; color: #c7f94e; }
+</style>
+</head>
+<body>
+  <div class="floor"></div>
+  <div class="box">
+    <div class="logo"><span class="m1"><i></i><i></i></span>CITÁVEL</div>
+    <h1>A IA já tem uma opinião sobre a sua marca. <span class="accent">Você não foi consultado.</span></h1>
+    <div class="bottom">
+      <div class="tag">Reputação de marcas em inteligências artificiais</div>
+      <div class="url">citavel.ai</div>
+    </div>
+  </div>
+</body>
+</html>

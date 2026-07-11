@@ -16,10 +16,12 @@
   --lime:     #c7f94e;   /* acento da marca */
   --lime-dim: #aee02f;
   --lime-ink: #0b0b0d;   /* texto sobre limão */
+  --tinta:    #5a7a10;   /* o limão sobre fundo claro */
 
-  /* Tipografia */
+  /* Tipografia (brand book v1, julho 2026) */
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Ritmo */
   --maxw: 1180px;
@@ -67,13 +69,14 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 9px;
-  font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  font-family: var(--mono);
+  font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
   color: var(--lime);
 }
 .eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--lime); opacity: .7; }
 .eyebrow.center::before { display: none; }
 
-.kicker { color: var(--mute-2); font-size: .8rem; letter-spacing: .04em; }
+.kicker { font-family: var(--mono); color: var(--mute-2); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; }
 .accent { color: var(--lime); }
 .bone-dim { color: var(--mute); }
 
@@ -102,8 +105,12 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 }
 .nav.scrolled { border-bottom-color: var(--line); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.logo { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+.logo { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
 .logo sup { color: var(--lime); font-size: .6em; }
+/* Símbolo M1 · aspas de sinal (brand book, lockup oficial) */
+.m1 { display: inline-flex; gap: 3px; align-items: center; }
+.m1 i { display: inline-block; width: 5px; height: 12px; background: var(--lime); border-radius: 2.5px; transform: skewX(-14deg) translateY(-3.5px); }
+.m1 i + i { height: 17px; transform: skewX(-14deg) translateY(3.5px); }
 .nav-links { display: flex; gap: 30px; list-style: none; }
 .nav-links a { color: var(--mute); font-size: .92rem; font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: var(--bone); }
@@ -150,7 +157,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .statsbar { border-block: 1px solid var(--line); background: var(--ink-2); }
 .statsbar .wrap { padding-block: clamp(40px, 6vw, 64px); }
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 40px); }
-.stat .num { font-size: clamp(2.1rem, 4.4vw, 3.2rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+.stat .num { font-family: var(--mono); font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
 .stat .num .accent { color: var(--lime); }
 .stat .lbl { color: var(--mute); font-size: .95rem; margin-top: 10px; line-height: 1.35; }
 .stat .src { color: var(--mute-2); font-size: .76rem; margin-top: 6px; }
@@ -163,7 +170,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 /* ---------- Problema (cards de dado) ---------- */
 .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 52px; }
 .pain-cell { background: var(--ink); padding: clamp(26px, 3vw, 38px); }
-.pain-cell .num { font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 600; letter-spacing: -0.04em; color: var(--lime); line-height: 1; }
+.pain-cell .num { font-family: var(--mono); font-size: clamp(2.1rem, 3.6vw, 2.9rem); font-weight: 600; letter-spacing: -0.04em; color: var(--lime); line-height: 1; }
 .pain-cell p { color: var(--mute); margin-top: 14px; font-size: .98rem; }
 .pain-cell .src { color: var(--mute-2); font-size: .76rem; margin-top: 10px; }
 .pain-close { margin-top: 40px; font-size: clamp(1.1rem, 2vw, 1.4rem); max-width: 40ch; line-height: 1.35; }
@@ -213,7 +220,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .offer-card .tag { font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--lime); font-weight: 600; }
 .offer-card h3 { margin: 14px 0 12px; }
 .offer-card p { color: var(--mute); font-size: .96rem; }
-.offer-card .price { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.03em; margin: 22px 0; }
+.offer-card .price { font-family: var(--mono); font-size: 1.4rem; font-weight: 600; letter-spacing: -0.03em; margin: 22px 0; }
 .offer-card .price small { color: var(--mute-2); font-size: .9rem; font-weight: 400; }
 .offer-card .btn { margin-top: auto; align-self: flex-start; }
 
@@ -224,7 +231,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .plan h4 { font-size: 1.3rem; margin-bottom: 8px; }
 .plan .who { color: var(--mute-2); font-size: .88rem; min-height: 2.6em; }
 .plan .inc { color: var(--mute); font-size: .93rem; margin: 16px 0; flex: 1; }
-.plan .price { font-size: 1.35rem; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 20px; }
+.plan .price { font-family: var(--mono); font-size: 1.25rem; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 20px; }
 .plan .price small { color: var(--mute-2); font-weight: 400; font-size: .85rem; }
 
 /* ---------- Fundador ---------- */
@@ -232,7 +239,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .founder h2 { margin: 18px 0 24px; }
 .founder p { color: var(--mute); font-size: 1.05rem; max-width: 52ch; }
 .founder-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
-.founder-stats .num { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 600; color: var(--lime); letter-spacing: -0.03em; line-height: 1; }
+.founder-stats .num { font-family: var(--mono); font-size: clamp(1.6rem, 2.7vw, 2.15rem); font-weight: 600; color: var(--lime); letter-spacing: -0.03em; line-height: 1; }
 .founder-stats p { font-size: .86rem; margin-top: 8px; }
 .founder-portrait { aspect-ratio: 4/5; border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(180deg, var(--ink-3), var(--ink-2)); display: flex; align-items: flex-end; padding: 28px; }
 .founder-portrait .cap { font-family: var(--serif); font-size: 1.3rem; color: var(--mute); }
@@ -276,7 +283,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 /* ---------- A prova (Case #0) ---------- */
 .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-top: 52px; }
 .proof-cell { background: var(--ink); padding: clamp(24px, 2.6vw, 34px); }
-.proof-cell .num { font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
+.proof-cell .num { font-family: var(--mono); font-size: clamp(1.3rem, 2.3vw, 1.85rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
 .proof-cell p { color: var(--mute); margin-top: 14px; font-size: .95rem; line-height: 1.5; }
 .proof-cell p b { color: var(--bone); }
 .proof-cosentino { margin-top: 56px; border: 1px solid var(--line); border-left: 3px solid var(--lime); border-radius: var(--radius); background: var(--ink-2); padding: clamp(28px, 3.4vw, 46px); }
@@ -286,7 +293,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 
 /* ---------- Fórmula PULSO ---------- */
 .formula { margin-top: 48px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2); padding: clamp(26px, 3vw, 40px); }
-.formula-line { font-size: clamp(1.3rem, 3.4vw, 2.3rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; }
+.formula-line { font-family: var(--mono); font-size: clamp(1.15rem, 3vw, 2rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; }
 .formula-line .fv { color: var(--lime); white-space: nowrap; }
 .formula-line .fv small { color: var(--mute); font-weight: 400; font-size: .62em; }
 .formula-legend { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 20px; color: var(--mute); font-size: .92rem; }
@@ -314,6 +321,23 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .diag-form input:focus { outline: none; border-color: var(--lime); box-shadow: 0 0 0 3px rgba(199,249,78,.15); }
 .btn-block { justify-content: center; width: 100%; }
 .diag-fine { color: var(--mute-2); font-size: .8rem; line-height: 1.5; }
+
+/* ---------- Peles de produto (brand book seção 04, arte pintada à mão) ---------- */
+.skin { height: 130px; background-size: cover; background-position: center; border-radius: 13px 13px 0 0; }
+.plan .skin { margin: calc(-1 * clamp(24px, 2.6vw, 32px)) calc(-1 * clamp(24px, 2.6vw, 32px)) 22px; }
+.offer-card .skin { margin: calc(-1 * clamp(26px, 3vw, 38px)) calc(-1 * clamp(26px, 3vw, 38px)) 24px; height: 150px; }
+.skin-radiografia { background-image: url(assets/skin-radiografia.jpg); }
+.skin-presenca { background-image: url(assets/skin-presenca.jpg); }
+.skin-autoridade { background-image: url(assets/skin-autoridade.jpg); }
+.skin-lider { background-image: url(assets/skin-lider.jpg); }
+.skin-diagnostico { background: linear-gradient(171deg, #111114 48.6%, var(--lime) 49.4%, var(--lime) 50%, #111114 51%); }
+
+/* ---------- Manifesto: campo semiótico vivo ---------- */
+.manifesto { position: relative; overflow: hidden; }
+.manifesto-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .38; }
+.manifesto::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(11,11,13,.30) 0%, rgba(11,11,13,.92) 78%); }
+.manifesto .wrap { position: relative; z-index: 2; }
+@media (prefers-reduced-motion: reduce) { .manifesto-bg { display: none; } }
 
 /* ---------- Páginas internas: fases detalhadas ---------- */
 .phase-detail { display: flex; flex-direction: column; gap: 22px; margin-top: 52px; }
