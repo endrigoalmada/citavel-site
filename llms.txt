@@ -1,0 +1,77 @@
+# CITÁVEL™
+
+> Agência de reputação em inteligência artificial. A CITÁVEL constrói a reputação de marcas brasileiras dentro das IAs generativas (ChatGPT, Gemini, Perplexity, Claude, Copilot, Meta AI, Grok e DeepSeek), pelo Método PULSO™.
+
+## O que é a CITÁVEL
+
+A CITÁVEL é uma agência de reputação em IA. Quando alguém pergunta a uma inteligência artificial sobre um mercado, produto ou serviço, a IA responde com uma recomendação. A CITÁVEL trabalha para que essa recomendação seja a marca do cliente, descrita com as palavras certas. É a primeira operação brasileira dedicada a construir reputação de marca dentro das inteligências artificiais.
+
+A CITÁVEL faz parte da Desigual IA Labs, agência de comunicação com 22 anos de mercado, sediada em Birigui, interior de São Paulo. Fundador: Endrigo Almada.
+
+## O problema que a CITÁVEL resolve
+
+Antes de comprar, ligar ou visitar, as pessoas perguntam a uma inteligência artificial. 77% dos usuários de IA já a usam como mecanismo de busca (Adobe, 2025). A IA responde sobre a marca com o que encontra solto pela internet, e essa resposta vira a primeira impressão do cliente. Ao contrário do Google, não existe anúncio para comprar nas respostas da IA: existe apenas reputação construída, ou a ausência dela.
+
+Dado central: cerca de 80% das marcas que a IA recomenda não estão no topo do Google. A IA não recomenda quem paga nem quem ranqueia melhor, recomenda quem tem reputação e presença nas fontes que ela consulta.
+
+## O Método PULSO™
+
+Framework proprietário de cinco fases para construir reputação de marca em IA.
+
+### P, Percepção (Diagnóstico)
+Auditoria da reputação atual em 5 inteligências artificiais, com 20 a 50 perguntas reais de clientes. Gera a Radiografia PULSO e o PULSO Score, índice de 0 a 100.
+
+### U, Unificação (Caráter)
+Extração do que torna a empresa única (história, diferenciais, evidências, conhecimento e voz) e organização desse material para que a IA compreenda a marca.
+
+### L, Linguagem (Conteúdo)
+Produção de conteúdo que a IA confia e cita: respostas claras, comparativos, dados e casos, em formato extraível.
+
+### S, Sinal (Presença)
+Distribuição da reputação nas fontes que as IAs realmente consultam: YouTube, LinkedIn, fóruns, imprensa e enciclopédias. Marcas são citadas até 6,5 vezes mais por terceiros do que pelo próprio site.
+
+### O, Operação (Monitoramento)
+Monitoramento contínuo. O conjunto de fontes que a IA cita muda de forma significativa todo mês, então a reputação é medida semanalmente e reportada mensalmente.
+
+## Prova: Case #0, o método rodado no próprio fundador
+
+Antes de vender o método, a CITÁVEL aplicou o PULSO completo no nome do próprio fundador, com medição pública (detalhes em https://citavel.ai/case.html):
+
+- Em 30 dias, Endrigo Almada saiu de nenhuma menção nas IAs para recomendação número 1 do ChatGPT numa shortlist de criadores de IA brasileiros.
+- PULSO Score medido em 3 motores: de 30,3 para 32,5 entre duas rodadas comparáveis.
+- Entidade Wikidata criada do zero; IMDb passou a ser citado pelos motores como fonte sobre ele; YouTube saiu de 3 para 9 filmes indexáveis.
+- Lastro humano: o Cinema Impossível, obra do fundador, soma mais de 87 milhões de visualizações orgânicas.
+
+Primeira Radiografia de cliente: uma incorporadora fundada em 1979, que criou a cidade de Primavera do Leste (MT) e venceu o Prêmio Master Imobiliário, marcou 24 de 100. Conclusão: até líderes reais de mercado ainda são quase invisíveis para as IAs.
+
+## Fórmula pública de medição
+
+PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra e recomenda a marca?), C é Consistência (a IA conta a mesma história em todos os motores?) e S é Sinais (fontes de terceiros confirmam?). Índice de 0 a 100.
+
+## Serviços e preços (lançamento, julho de 2026)
+
+- Diagnóstico Relâmpago: a marca testada em 5 perguntas reais na IA, resultado em 48 horas. Gratuito.
+- Radiografia PULSO™ (diagnóstico completo de reputação em IA): 120 medições em 4 inteligências artificiais, relatório com PULSO Score e plano de ação priorizado. R$ 497 (preço de lançamento; valor cheio R$ 1.997), entrega em 10 dias úteis. O valor é 100% abatido na assinatura de qualquer plano em até 30 dias.
+- Plano Presença: medição mensal do PULSO Score, correções de reputação e conteúdo citável. R$ 997/mês.
+- Plano Autoridade: tudo do Presença, mais corroboração de terceiros (imprensa, enciclopédias estruturadas, YouTube, listas e fóruns). É o plano com o trabalho que gerou o Case #0. R$ 2.497/mês.
+- Plano Líder de Categoria: tudo do Autoridade, mais disputa de categoria em múltiplas praças e relatório executivo. R$ 4.997/mês.
+
+## Posicionamento
+
+A CITÁVEL constrói reputação, não truques técnicos. Schema, llms.txt e otimizações de página ajudam, mas tendem a virar padrão gratuito nos geradores de site. O valor durável está na autoridade, na presença em fontes de terceiros e no monitoramento contínuo, que são trabalho humano de reputação e não se automatizam.
+
+## Contato
+
+- Site: https://citavel.ai e https://citavel.com.br
+- WhatsApp: https://wa.me/5518991976211
+- Local: Birigui, SP, Brasil
+- Assinatura do fundador: "A IA não sente. Eu a ensino a amar." Endrigo Almada.
+
+## Páginas
+
+- https://citavel.ai/ (visão geral, preços e diagnóstico gratuito)
+- https://citavel.ai/metodo.html (o Método PULSO em detalhe, com a fórmula pública)
+- https://citavel.ai/case.html (Case #0: de zero a #1 no ChatGPT em 30 dias)
+- https://citavel.ai/sobre.html (sobre a CITÁVEL, versão para IAs)
+
+> Atualizado em 11 de julho de 2026.
