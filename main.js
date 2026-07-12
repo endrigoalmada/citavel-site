@@ -28,7 +28,8 @@
         "Nome: " + v("f-nome") + "\n" +
         "Empresa: " + v("f-empresa") + "\n" +
         "Setor e cidade: " + v("f-setor") + "\n" +
-        "WhatsApp: " + v("f-whats");
+        "WhatsApp: " + v("f-whats") + "\n" +
+        "E-mail: " + v("f-email");
       window.open("https://wa.me/5518991976211?text=" + encodeURIComponent(msg), "_blank", "noopener");
     });
   }
