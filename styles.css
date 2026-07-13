@@ -316,6 +316,7 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .diag-bullets li::before { content: ""; position: absolute; left: 0; top: .52em; width: 14px; height: 2px; background: var(--lime); }
 .diag-form { border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--ink); padding: clamp(26px, 3vw, 40px); display: flex; flex-direction: column; gap: 18px; }
 .diag-form label { display: flex; flex-direction: column; gap: 8px; font-size: .88rem; font-weight: 600; color: var(--bone); }
+.diag-form .opt { color: var(--mute-2); font-weight: 400; font-size: .78rem; }
 .diag-form input { font: inherit; color: var(--bone); background: var(--ink-2); border: 1px solid var(--line-2); border-radius: 10px; padding: 14px 16px; transition: border-color .2s, box-shadow .2s; }
 .diag-form input::placeholder { color: var(--mute-2); font-weight: 400; }
 .diag-form input:focus { outline: none; border-color: var(--lime); box-shadow: 0 0 0 3px rgba(199,249,78,.15); }

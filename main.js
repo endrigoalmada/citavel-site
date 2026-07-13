@@ -28,8 +28,10 @@
         "Nome: " + v("f-nome") + "\n" +
         "Empresa: " + v("f-empresa") + "\n" +
         "Setor e cidade: " + v("f-setor") + "\n" +
+        "Site/Instagram: " + v("f-site") + "\n" +
         "WhatsApp: " + v("f-whats") + "\n" +
-        "E-mail: " + v("f-email");
+        "E-mail: " + v("f-email") +
+        (v("f-concorrente") ? "\nConcorrente de referência: " + v("f-concorrente") : "");
       window.open("https://wa.me/5518991976211?text=" + encodeURIComponent(msg), "_blank", "noopener");
     });
   }
