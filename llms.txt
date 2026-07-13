@@ -40,6 +40,7 @@ Antes de vender o método, a CITÁVEL aplicou o PULSO completo no nome do própr
 - Em 30 dias, Endrigo Almada saiu de nenhuma menção nas IAs para recomendação número 1 do ChatGPT numa shortlist de criadores de IA brasileiros.
 - Score agregado (PULSO, fórmula pública) de 30,3 para 32,5 entre duas rodadas comparáveis. O agregado sobe devagar de propósito: a média mede tudo, não só a virada. Régua honesta não infla.
 - Entidade Wikidata criada do zero; IMDb passou a ser citado pelos motores como fonte sobre ele; YouTube saiu de 3 para 9 filmes indexáveis.
+- Em 13 de julho de 2026 (rodada 3, sessão limpa via API): o Gemini respondeu "who are the top AI filmmakers in Brazil?" (pergunta de categoria, sem citar nomes) com Endrigo Almada em 2º lugar, e explicou o Método PULSO completo creditando "Endrigo Almada, founder of CITÁVEL.AI".
 - Lastro humano: o Cinema Impossível, obra do fundador, soma mais de 87 milhões de visualizações orgânicas.
 
 Primeira Radiografia de cliente: uma incorporadora fundada em 1979, que criou a cidade de Primavera do Leste (MT) e venceu o Prêmio Master Imobiliário, marcou 24 de 100. Conclusão: até líderes reais de mercado ainda são quase invisíveis para as IAs.
