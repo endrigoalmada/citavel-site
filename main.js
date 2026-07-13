@@ -17,7 +17,8 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  // Form do Diagnóstico Relâmpago -> pedido por e-mail + confirmação automática pro lead
+  // Form do Diagnóstico Relâmpago -> função própria (avisa a CITÁVEL e confirma pro
+  // lead via Resend). Se a função cair, o FormSubmit segura o lead como reserva.
   var form = document.getElementById("diag-form");
   if (form) {
     form.addEventListener("submit", function (ev) {
@@ -26,28 +27,45 @@
       var btn = form.querySelector("button[type=submit]");
       btn.disabled = true;
       btn.innerHTML = "Enviando...";
-      fetch("https://formsubmit.co/ajax/4437364dda850b99f7239eb14dc57dd3", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify({
-          _subject: "Novo pedido de Diagnóstico Relâmpago: " + v("f-empresa"),
-          _template: "table",
-          _captcha: "false",
-          _replyto: v("f-email"),
-          _autoresponse: "Recebemos seu pedido de Diagnóstico Relâmpago na CITÁVEL. Vamos rodar as 5 perguntas do seu mercado nas IAs, em sessão limpa, e o resultado chega em até 48 horas neste e-mail e no seu WhatsApp. Sem compromisso. Enquanto isso, a régua que usamos é pública: https://citavel.ai/metodo.html · Endrigo Almada, fundador",
-          nome: v("f-nome"),
-          empresa: v("f-empresa"),
-          setor_e_cidade: v("f-setor"),
-          site_ou_instagram: v("f-site"),
-          whatsapp: v("f-whats"),
-          email: v("f-email"),
-          concorrente_referencia: v("f-concorrente") || "(não informado)"
-        })
-      }).then(function (r) { return r.json(); }).then(function () {
+      var campos = {
+        nome: v("f-nome"),
+        empresa: v("f-empresa"),
+        setor_e_cidade: v("f-setor"),
+        site_ou_instagram: v("f-site"),
+        whatsapp: v("f-whats"),
+        email: v("f-email"),
+        concorrente_referencia: v("f-concorrente") || "(não informado)"
+      };
+      var sucesso = function () {
         form.innerHTML = '<div class="diag-ok"><b>Pedido recebido!</b><br>A confirmação já está a caminho do seu e-mail e o resultado chega em até 48 horas. Confere a caixa de spam se não aparecer em alguns minutos.</div>';
-      }).catch(function () {
+      };
+      var falha = function () {
         btn.disabled = false;
         btn.innerHTML = "Tentar de novo →";
+      };
+      var reserva = function () {
+        return fetch("https://formsubmit.co/ajax/4437364dda850b99f7239eb14dc57dd3", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(Object.assign({
+            _subject: "Novo pedido de Diagnóstico Relâmpago: " + campos.empresa,
+            _template: "table",
+            _captcha: "false",
+            _replyto: campos.email
+          }, campos))
+        }).then(function (r) {
+          if (!r.ok) throw new Error("reserva falhou");
+          sucesso();
+        });
+      };
+      fetch("https://citavel-funil.vercel.app/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(campos)
+      }).then(function (r) { return r.json(); }).then(function (data) {
+        if (data && data.ok) { sucesso(); } else { throw new Error(data && data.erro || "falha"); }
+      }).catch(function () {
+        reserva().catch(falha);
       });
     });
   }
