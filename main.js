@@ -52,6 +52,50 @@
     });
   }
 
+  // Faixa de stats viva: o vídeo roda 1x ao entrar na tela; ao concluir, os números
+  // acendem em cascata; depois disso o mouse "esfrega" o tempo do vídeo (rollover).
+  var statsbar = document.querySelector(".statsbar");
+  var statsVid = statsbar ? statsbar.querySelector(".stats-bg") : null;
+  if (statsbar && statsVid) {
+    var revealStats = function () {
+      if (statsbar.classList.contains("revealed")) return;
+      statsbar.classList.add("revealed");
+      statsbar.querySelectorAll("[data-count]").forEach(function (el) {
+        setTimeout(function () { animateCount(el); }, 350);
+      });
+    };
+    if (reduce || !("IntersectionObserver" in window)) {
+      revealStats();
+    } else {
+      new IntersectionObserver(function (es, io) {
+        es.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.disconnect();
+          var p = statsVid.play();
+          if (p && p.catch) p.catch(revealStats);
+          statsVid.addEventListener("ended", revealStats, { once: true });
+          setTimeout(revealStats, 7000); // rede lenta não segura os números
+        });
+      }, { threshold: 0.4 }).observe(statsbar);
+
+      var rafScrub = null;
+      statsbar.addEventListener("mousemove", function (ev) {
+        if (!statsbar.classList.contains("revealed") || !statsVid.duration || rafScrub) return;
+        rafScrub = requestAnimationFrame(function () {
+          rafScrub = null;
+          var r = statsbar.getBoundingClientRect();
+          var x = Math.min(Math.max((ev.clientX - r.left) / r.width, 0), 1);
+          statsVid.currentTime = x * (statsVid.duration - 0.05);
+        });
+      });
+      statsbar.addEventListener("mouseleave", function () {
+        if (statsbar.classList.contains("revealed") && statsVid.duration) {
+          statsVid.currentTime = statsVid.duration - 0.05;
+        }
+      });
+    }
+  }
+
   // Autoplay resiliente dos vídeos decorativos (play ao entrar na tela, pause fora)
   document.querySelectorAll("video[autoplay]").forEach(function (v) {
     var tryPlay = function () { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); };
@@ -78,7 +122,10 @@
     requestAnimationFrame(step);
   }
   function watchCounters() {
-    var counters = document.querySelectorAll("[data-count]");
+    var counters = Array.prototype.filter.call(
+      document.querySelectorAll("[data-count]"),
+      function (el) { return !el.closest(".statsbar"); }
+    );
     if (reduce || !("IntersectionObserver" in window)) return;
     var ioC = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
