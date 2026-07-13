@@ -350,6 +350,9 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .art-divider { height: clamp(90px, 13vw, 170px); background-size: cover; background-position: center; border-block: 1px solid var(--line); }
 .art-divider.m1 { background-image: url(assets/art/sep-m1-3d.jpg); }
 .art-divider.relevo { background-image: url(assets/art/sep-relevo.jpg); }
+.art-divider.vivo { position: relative; overflow: hidden; background-image: url(assets/art/sep-vivo-poster.jpg); }
+.art-divider.vivo video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-reduced-motion: reduce) { .art-divider.vivo video { display: none; } }
 
 /* ---------- Páginas internas: fases detalhadas ---------- */
 .phase-detail { display: flex; flex-direction: column; gap: 22px; margin-top: 52px; }
