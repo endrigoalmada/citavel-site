@@ -346,6 +346,11 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .manifesto .wrap { position: relative; z-index: 2; }
 @media (prefers-reduced-motion: reduce) { .manifesto-bg { display: none; } }
 
+/* ---------- Separadores de arte (pacote gráfico) ---------- */
+.art-divider { height: clamp(90px, 13vw, 170px); background-size: cover; background-position: center; border-block: 1px solid var(--line); }
+.art-divider.m1 { background-image: url(assets/art/sep-m1-3d.jpg); }
+.art-divider.relevo { background-image: url(assets/art/sep-relevo.jpg); }
+
 /* ---------- Páginas internas: fases detalhadas ---------- */
 .phase-detail { display: flex; flex-direction: column; gap: 22px; margin-top: 52px; }
 .phase-block { border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2); padding: clamp(26px, 3vw, 40px); }
