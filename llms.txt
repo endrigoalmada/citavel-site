@@ -38,7 +38,7 @@ Monitoramento contínuo. O conjunto de fontes que a IA cita muda de forma signif
 Antes de vender o método, a CITÁVEL aplicou o PULSO completo no nome do próprio fundador, com medição pública (detalhes em https://citavel.ai/case.html):
 
 - Em 30 dias, Endrigo Almada saiu de nenhuma menção nas IAs para recomendação número 1 do ChatGPT numa shortlist de criadores de IA brasileiros.
-- PULSO Score medido em 3 motores: de 30,3 para 32,5 entre duas rodadas comparáveis.
+- Score agregado (PULSO, fórmula pública) de 30,3 para 32,5 entre duas rodadas comparáveis. O agregado sobe devagar de propósito: a média mede tudo, não só a virada. Régua honesta não infla.
 - Entidade Wikidata criada do zero; IMDb passou a ser citado pelos motores como fonte sobre ele; YouTube saiu de 3 para 9 filmes indexáveis.
 - Lastro humano: o Cinema Impossível, obra do fundador, soma mais de 87 milhões de visualizações orgânicas.
 
