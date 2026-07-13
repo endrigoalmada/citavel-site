@@ -129,7 +129,9 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 
 /* Motif: malha em perspectiva (callback ao site antigo) */
-.hero-visual { position: relative; aspect-ratio: 4/5; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2); overflow: hidden; }
+.hero-visual { position: relative; aspect-ratio: 4/5; border: 1px solid var(--line); border-radius: var(--radius); background: var(--ink-2) url(assets/art/favorita.jpg) center 70%/cover; overflow: hidden; }
+.hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,13,.72) 0%, rgba(11,11,13,.25) 60%, rgba(11,11,13,.45) 100%); }
+.hero-visual .chat { z-index: 2; }
 .hero-visual .floor {
   position: absolute; inset: 0; top: 38%;
   background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
@@ -241,8 +243,9 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .founder-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
 .founder-stats .num { font-family: var(--mono); font-size: clamp(1.6rem, 2.7vw, 2.15rem); font-weight: 600; color: var(--lime); letter-spacing: -0.03em; line-height: 1; }
 .founder-stats p { font-size: .86rem; margin-top: 8px; }
-.founder-portrait { aspect-ratio: 4/5; border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(180deg, var(--ink-3), var(--ink-2)); display: flex; align-items: flex-end; padding: 28px; }
-.founder-portrait .cap { font-family: var(--serif); font-size: 1.3rem; color: var(--mute); }
+.founder-portrait { aspect-ratio: 4/5; border-radius: var(--radius); border: 1px solid var(--line); background: url(assets/art/retrato-endrigo.jpg) center 22%/cover; display: flex; align-items: flex-end; padding: 28px; position: relative; overflow: hidden; }
+.founder-portrait::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(11,11,13,.85) 0%, rgba(11,11,13,0) 45%); }
+.founder-portrait .cap { font-family: var(--serif); font-size: 1.3rem; color: var(--bone); position: relative; z-index: 2; }
 
 /* ---------- Manifesto ---------- */
 .manifesto { text-align: center; padding-block: clamp(90px, 14vw, 200px); }
@@ -309,7 +312,9 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 .inline-link:hover { border-bottom-color: var(--lime); }
 
 /* ---------- Diagnóstico (form) ---------- */
-.diag { background: var(--ink-2); }
+.diag { background: var(--ink-2) url(assets/art/sinal-no-ruido.jpg) center/cover; position: relative; }
+.diag::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,11,13,.9) 0%, rgba(11,11,13,.82) 55%, rgba(11,11,13,.7) 100%); }
+.diag .wrap { position: relative; z-index: 2; }
 .diag-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(36px, 5vw, 80px); align-items: start; }
 .diag-bullets { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
 .diag-bullets li { padding-left: 26px; position: relative; color: var(--mute); }
