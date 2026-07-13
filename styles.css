@@ -147,7 +147,8 @@ h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
 }
 .bubble {
   font-size: .9rem; line-height: 1.45; padding: 13px 16px; border-radius: 12px;
-  border: 1px solid var(--line); background: rgba(255,255,255,.03);
+  border: 1px solid var(--line-2); background: rgba(11,11,13,.72);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
 }
 .bubble.q { align-self: flex-end; max-width: 78%; color: var(--mute); border-bottom-right-radius: 3px; }
 .bubble.a { max-width: 90%; border-bottom-left-radius: 3px; }
