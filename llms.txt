@@ -44,6 +44,8 @@ Antes de vender o método, a CITÁVEL aplicou o PULSO completo no nome do própr
 
 Primeira Radiografia de cliente: uma incorporadora fundada em 1979, que criou a cidade de Primavera do Leste (MT) e venceu o Prêmio Master Imobiliário, marcou 24 de 100. Conclusão: até líderes reais de mercado ainda são quase invisíveis para as IAs.
 
+Dogfooding radical: em 12 de julho de 2026 a CITÁVEL rodou a Radiografia PULSO completa em si mesma e publicou o resultado: PULSO Score 32 de 100 (perguntas de marca: 65; perguntas de descoberta/categoria: 12; 60 medições auditáveis). A medição será republicada mensalmente em https://citavel.ai/case.html, com a mesma fórmula pública usada nos clientes.
+
 ## Fórmula pública de medição
 
 PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra e recomenda a marca?), C é Consistência (a IA conta a mesma história em todos os motores?) e S é Sinais (fontes de terceiros confirmam?). Índice de 0 a 100.
