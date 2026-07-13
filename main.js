@@ -17,22 +17,38 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  // Form do Diagnóstico Relâmpago -> abre WhatsApp com mensagem pronta
+  // Form do Diagnóstico Relâmpago -> pedido por e-mail + confirmação automática pro lead
   var form = document.getElementById("diag-form");
   if (form) {
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
-      var msg =
-        "Olá! Quero o Diagnóstico Relâmpago grátis da CITÁVEL.\n" +
-        "Nome: " + v("f-nome") + "\n" +
-        "Empresa: " + v("f-empresa") + "\n" +
-        "Setor e cidade: " + v("f-setor") + "\n" +
-        "Site/Instagram: " + v("f-site") + "\n" +
-        "WhatsApp: " + v("f-whats") + "\n" +
-        "E-mail: " + v("f-email") +
-        (v("f-concorrente") ? "\nConcorrente de referência: " + v("f-concorrente") : "");
-      window.open("https://wa.me/5518991976211?text=" + encodeURIComponent(msg), "_blank", "noopener");
+      var btn = form.querySelector("button[type=submit]");
+      btn.disabled = true;
+      btn.innerHTML = "Enviando...";
+      fetch("https://formsubmit.co/ajax/endrigo@citavel.ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          _subject: "Novo pedido de Diagnóstico Relâmpago: " + v("f-empresa"),
+          _template: "table",
+          _captcha: "false",
+          _replyto: v("f-email"),
+          _autoresponse: "Recebemos seu pedido de Diagnóstico Relâmpago na CITÁVEL. Vamos rodar as 5 perguntas do seu mercado nas IAs, em sessão limpa, e o resultado chega em até 48 horas neste e-mail e no seu WhatsApp. Sem compromisso. Enquanto isso, a régua que usamos é pública: https://citavel.ai/metodo.html · Endrigo Almada, fundador",
+          nome: v("f-nome"),
+          empresa: v("f-empresa"),
+          setor_e_cidade: v("f-setor"),
+          site_ou_instagram: v("f-site"),
+          whatsapp: v("f-whats"),
+          email: v("f-email"),
+          concorrente_referencia: v("f-concorrente") || "(não informado)"
+        })
+      }).then(function (r) { return r.json(); }).then(function () {
+        form.innerHTML = '<div class="diag-ok"><b>Pedido recebido!</b><br>A confirmação já está a caminho do seu e-mail e o resultado chega em até 48 horas. Confere a caixa de spam se não aparecer em alguns minutos.</div>';
+      }).catch(function () {
+        btn.disabled = false;
+        btn.innerHTML = "Tentar de novo →";
+      });
     });
   }
 
