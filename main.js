@@ -26,7 +26,7 @@
       var btn = form.querySelector("button[type=submit]");
       btn.disabled = true;
       btn.innerHTML = "Enviando...";
-      fetch("https://formsubmit.co/ajax/endrigo@citavel.ai", {
+      fetch("https://formsubmit.co/ajax/4437364dda850b99f7239eb14dc57dd3", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
