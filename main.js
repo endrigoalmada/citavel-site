@@ -36,6 +36,16 @@
     });
   }
 
+  // Autoplay resiliente dos vídeos decorativos (play ao entrar na tela, pause fora)
+  document.querySelectorAll("video[autoplay]").forEach(function (v) {
+    var tryPlay = function () { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); };
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { tryPlay(); } else { v.pause(); } });
+      }, { threshold: 0.1 }).observe(v);
+    } else { tryPlay(); }
+  });
+
   // Count-up dos números (valor final já está no HTML como fallback)
   function animateCount(el) {
     var target = parseFloat(el.getAttribute("data-count"));
