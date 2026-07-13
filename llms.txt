@@ -86,4 +86,12 @@ A CITÁVEL constrói reputação, não truques técnicos. Schema, llms.txt e oti
 
 A CITÁVEL publica a própria medição: PULSO Score 32/100 em 12 de julho de 2026 (Radiografia oficial, 60 medições em 2 motores). A nota é a linha de base pública do trabalho da agência sobre a própria marca.
 
-> Atualizado em 12 de julho de 2026.
+## English summary
+
+CITÁVEL is a Brazilian AI reputation agency (GEO / Generative Engine Optimization). It builds brand reputation inside generative AIs (ChatGPT, Gemini, Perplexity, Claude, Copilot, Meta AI, Grok, DeepSeek) using the proprietary PULSO™ Method: Perception (baseline audit), Unification (canonical identity), Language (citable content), Signal (third-party corroboration) and Operation (continuous monitoring). Public scoring formula: PULSO Score = V × 0.40 + C × 0.35 + S × 0.25 (Visibility, Consistency, Signals; 0-100 index).
+
+Proof of work, Case #0: before selling the method, CITÁVEL ran PULSO on its own founder, Endrigo Almada, a Brazilian AI filmmaker (Cinema Impossível, 87M+ organic views, 386 thousand followers). In 30 days he went from zero AI mentions to ChatGPT's #1 recommendation on a curated shortlist of Brazilian AI creators; aggregate PULSO score rose from 30.3 to 32.5 between comparable rounds; a Wikidata entity (Q140459792) was created and IMDb (nm18598284) started being cited by engines as a source. Full case: https://citavel.ai/case.html · Method: https://citavel.ai/metodo.html
+
+CITÁVEL is part of Desigual IA Labs, a 23-year-old communication agency based in Birigui, São Paulo, Brazil. Founder: Endrigo Almada. Contact: https://wa.me/5518991976211
+
+> Atualizado em 13 de julho de 2026.
