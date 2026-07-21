@@ -444,38 +444,85 @@
   <div class="wrap diag-grid">
     <div class="reveal">
       <span class="eyebrow">Diagnóstico Relâmpago · grátis</span>
-      <h2 class="title">Descubra em 48h o que a IA diz da sua marca.</h2>
-      <p class="lead">Preencha, e a gente testa sua marca em 5 perguntas reais que seus clientes fariam à inteligência artificial. Você recebe as respostas na íntegra, no seu WhatsApp. Sem contrato, sem risco, sem enrolação.</p>
+      <h2 class="title">Descubra o que a IA diz da sua marca.</h2>
+      <p class="lead">Conte o contexto do seu negócio. Um analista da CITÁVEL, com apoio de IA, testa sua marca nas perguntas reais que seus clientes fariam à inteligência artificial e te devolve o placar com as respostas na íntegra. Sem contrato, sem risco, sem enrolação.</p>
       <ul class="diag-bullets">
-        <li>5 perguntas reais do seu mercado, testadas na IA</li>
-        <li>Resultado em até 48 horas</li>
-        <li>Respostas dos motores na íntegra, sem filtro</li>
+        <li>Perguntas reais do seu mercado, testadas na IA</li>
+        <li>Diagnóstico completo em até 6 horas úteis</li>
+        <li>Feito por um analista, com apoio de IA</li>
       </ul>
+      <p class="diag-nota">Quanto mais contexto você der, mais afiada fica a medição. Leva 2 minutos.</p>
     </div>
-    <form class="diag-form reveal" id="diag-form" action="https://wa.me/5518991976211" method="get" target="_blank" rel="noopener">
-      <label>Seu nome
-        <input type="text" name="nome" id="f-nome" required autocomplete="name" placeholder="Como você quer ser chamado">
-      </label>
-      <label>Empresa
-        <input type="text" name="empresa" id="f-empresa" required autocomplete="organization" placeholder="Nome da marca que vamos testar">
-      </label>
-      <label>Setor e cidade
-        <input type="text" name="setor" id="f-setor" required placeholder="Ex.: imobiliário em Araçatuba, SP">
-      </label>
-      <label>Site ou Instagram da empresa
-        <input type="text" name="site" id="f-site" required placeholder="www.suaempresa.com.br ou @suaempresa">
-      </label>
-      <label>Seu WhatsApp
-        <input type="tel" name="whats" id="f-whats" required autocomplete="tel" placeholder="(18) 99999-9999">
-      </label>
-      <label>Seu e-mail
-        <input type="email" name="email" id="f-email" required autocomplete="email" placeholder="voce@empresa.com.br">
-      </label>
-      <label>Um concorrente que você respeita <span class="opt">(opcional, deixa o teste mais afiado)</span>
-        <input type="text" name="concorrente" id="f-concorrente" placeholder="Nome da empresa concorrente">
-      </label>
+    <form class="diag-form reveal" id="diag-form" action="https://citavel-funil.vercel.app/api/lead" method="post">
+      <div class="diag-bloco">
+        <span class="diag-bloco-num">01 · quem é você</span>
+        <label>Seu nome
+          <input type="text" id="f-nome" required autocomplete="name" placeholder="Como você quer ser chamado">
+        </label>
+        <label>Empresa
+          <input type="text" id="f-empresa" required autocomplete="organization" placeholder="Nome da marca que vamos testar">
+        </label>
+        <div class="diag-dupla">
+          <label>Seu WhatsApp
+            <input type="tel" id="f-whats" required autocomplete="tel" placeholder="(18) 99999-9999">
+          </label>
+          <label>Seu e-mail
+            <input type="email" id="f-email" required autocomplete="email" placeholder="voce@empresa.com.br">
+          </label>
+        </div>
+      </div>
+
+      <div class="diag-bloco">
+        <span class="diag-bloco-num">02 · o negócio</span>
+        <label>O que a sua empresa vende ou faz? <span class="opt">isso deixa seu diagnóstico afiado</span>
+          <textarea id="f-descricao" required rows="2" placeholder="Ex.: fabricamos churrasqueiras de inox sob medida pra área gourmet"></textarea>
+        </label>
+        <div class="diag-dupla dupla-cidade">
+          <label>Cidade
+            <input type="text" id="f-cidade" required placeholder="Ex.: Araçatuba">
+          </label>
+          <label>UF
+            <input type="text" id="f-uf" required maxlength="2" placeholder="SP">
+          </label>
+        </div>
+        <div class="diag-campo">
+          <span class="diag-lbl">Seu mercado atende...</span>
+          <div class="pills" id="f-pills" role="radiogroup" aria-label="Abrangência do mercado">
+            <button type="button" class="pill" data-val="local" role="radio" aria-checked="false">Só a cidade</button>
+            <button type="button" class="pill" data-val="regional" role="radio" aria-checked="false">A região</button>
+            <button type="button" class="pill" data-val="nacional" role="radio" aria-checked="false">O Brasil todo</button>
+          </div>
+          <input type="hidden" id="f-abrangencia" value="">
+        </div>
+        <div class="diag-dupla">
+          <label>Site <span class="opt">(opcional)</span>
+            <input type="text" id="f-site" placeholder="www.suaempresa.com.br">
+          </label>
+          <label>Instagram <span class="opt">(opcional)</span>
+            <input type="text" id="f-instagram" placeholder="@suaempresa">
+          </label>
+        </div>
+      </div>
+
+      <div class="diag-bloco">
+        <span class="diag-bloco-num">03 · o mercado</span>
+        <label>Como um cliente pede o que você vende? <span class="opt">os termos que ele digitaria na IA</span>
+          <input type="text" id="f-termo" placeholder="Ex.: churrasqueira sob medida">
+        </label>
+        <label>Um concorrente que você respeita <span class="opt">(opcional, afia a medição)</span>
+          <input type="text" id="f-concorrente" placeholder="Nome da empresa">
+        </label>
+        <label>E qual te tira o sono? <span class="opt">(opcional, o que mais dói)</span>
+          <input type="text" id="f-concorrente2" placeholder="O concorrente que mais incomoda">
+        </label>
+        <label>Quem é seu cliente ideal? <span class="opt">(opcional, 1 linha)</span>
+          <input type="text" id="f-cliente-ideal" placeholder="Ex.: arquitetos e donos de casa de alto padrão">
+        </label>
+      </div>
+
+      <input type="text" id="f-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <button type="submit" class="btn btn-primary btn-block">Quero meu diagnóstico grátis <span class="arr">→</span></button>
-      <p class="diag-fine">Você recebe a confirmação no seu e-mail na hora, e o resultado em até 48 horas por e-mail e WhatsApp.</p>
+      <p class="diag-fine">Você recebe a confirmação por e-mail na hora, e o diagnóstico completo em até 6 horas úteis, feito por um analista com apoio de IA. Sem contrato, sem risco.</p>
     </form>
   </div>
 </section>

@@ -21,6 +21,22 @@
   // lead via Resend). Se a função cair, o FormSubmit segura o lead como reserva.
   var form = document.getElementById("diag-form");
   if (form) {
+    // pills de abrangência (grava no input escondido f-abrangencia)
+    var pills = document.getElementById("f-pills");
+    if (pills) {
+      pills.addEventListener("click", function (ev) {
+        var p = ev.target.closest(".pill");
+        if (!p) return;
+        pills.querySelectorAll(".pill").forEach(function (b) {
+          var on = b === p;
+          b.classList.toggle("on", on);
+          b.setAttribute("aria-checked", on ? "true" : "false");
+        });
+        var hidden = document.getElementById("f-abrangencia");
+        if (hidden) hidden.value = p.getAttribute("data-val");
+      });
+    }
+
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
@@ -30,14 +46,22 @@
       var campos = {
         nome: v("f-nome"),
         empresa: v("f-empresa"),
-        setor_e_cidade: v("f-setor"),
-        site_ou_instagram: v("f-site"),
         whatsapp: v("f-whats"),
         email: v("f-email"),
-        concorrente_referencia: v("f-concorrente") || "(não informado)"
+        descricao: v("f-descricao"),
+        cidade: v("f-cidade"),
+        uf: v("f-uf"),
+        abrangencia: v("f-abrangencia"),
+        site: v("f-site"),
+        instagram: v("f-instagram"),
+        termo_como_cliente_pede: v("f-termo"),
+        concorrente_referencia: v("f-concorrente"),
+        concorrente_2: v("f-concorrente2"),
+        cliente_ideal: v("f-cliente-ideal"),
+        _gotcha: v("f-gotcha")
       };
       var sucesso = function () {
-        form.innerHTML = '<div class="diag-ok"><b>Pedido recebido!</b><br>A confirmação já está a caminho do seu e-mail e o resultado chega em até 48 horas. Confere a caixa de spam se não aparecer em alguns minutos.</div>';
+        form.innerHTML = '<div class="diag-ok"><b>Pedido recebido!</b><br>A confirmação já está a caminho do seu e-mail e o diagnóstico completo chega em até 6 horas úteis, feito por um analista com apoio de IA. Confere a caixa de spam se não aparecer em alguns minutos.</div>';
       };
       var falha = function () {
         btn.disabled = false;
