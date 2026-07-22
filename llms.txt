@@ -53,7 +53,7 @@ PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA en
 
 ## Serviços e preços (lançamento, julho de 2026)
 
-- Diagnóstico Relâmpago: a marca testada em 5 perguntas reais na IA, resultado em 48 horas. Gratuito.
+- Diagnóstico Relâmpago: a marca testada em 5 perguntas reais na IA, resultado em até 6 horas úteis. Gratuito.
 - Radiografia PULSO™ (diagnóstico completo de reputação em IA): 120 medições em 4 inteligências artificiais, relatório com PULSO Score e plano de ação priorizado. R$ 497 (preço de lançamento; valor cheio R$ 1.997), entrega em 10 dias úteis. O valor é 100% abatido na assinatura de qualquer plano em até 30 dias.
 - Plano Presença: medição mensal do PULSO Score, correções de reputação e conteúdo citável. R$ 997/mês.
 - Plano Autoridade: tudo do Presença, mais corroboração de terceiros (imprensa, enciclopédias estruturadas, YouTube, listas e fóruns). É o plano com o trabalho que gerou o Case #0. R$ 2.497/mês.
