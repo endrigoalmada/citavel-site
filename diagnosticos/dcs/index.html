@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>DCS · Validação de dados oficiais · CITÁVEL</title>
+<style>
+  :root {
+    --bg: #0b0b0d; --panel: #111114; --panel-2: #17171b; --line: #26262a;
+    --ink: #f5f4f0; --dim: #a5a5ad; --faint: #77777f;
+    --lime: #c7f94e; --lime-ink: #0b0b0d; --alert: #ff7a59; --amber: #f0b64b;
+    --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    --sans: -apple-system, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.15rem 5rem; }
+
+  .logo { display: flex; align-items: center; gap: .55rem; margin-bottom: 2.2rem; }
+  .logo .tick { display: inline-block; width: 7px; border-radius: 3px; background: var(--lime); transform: skewX(-14deg); }
+  .logo b { font-size: 1.15rem; letter-spacing: -.02em; }
+  .logo span.g { color: var(--faint); font-size: .8rem; margin-left: .4rem; }
+
+  .eyebrow { font-family: var(--mono); font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--lime); }
+  h1 { font-size: clamp(1.55rem, 5vw, 2.1rem); font-weight: 750; letter-spacing: -.02em; line-height: 1.15; margin: .5rem 0 .8rem; text-wrap: balance; }
+  .intro { color: var(--dim); margin: 0 0 .8rem; max-width: 40rem; }
+  .intro b { color: var(--ink); }
+  .note { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--lime); border-radius: .4rem; padding: .8rem 1rem; font-size: .88rem; color: var(--dim); margin: 1.2rem 0 0; }
+  .note b { color: var(--ink); }
+
+  section { margin-top: 2.6rem; }
+  section > .eyebrow { display: block; margin-bottom: .3rem; }
+  section > h2 { font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; margin: 0 0 .35rem; }
+  section > .why { color: var(--dim); font-size: .9rem; margin: 0 0 1.1rem; max-width: 40rem; }
+
+  .campo { background: var(--panel); border: 1px solid var(--line); border-radius: .5rem; padding: 1rem 1.1rem 1.15rem; margin-bottom: .8rem; }
+  .campo.critico { border-left: 3px solid var(--alert); }
+  .campo.aberto { border-left: 3px solid var(--amber); }
+  .campo > label.titulo, .campo > .titulo { display: block; font-weight: 650; font-size: .95rem; margin-bottom: .3rem; }
+  .hoje { border: 1px solid var(--line); border-radius: .35rem; background: var(--panel-2); margin: .5rem 0 .75rem; overflow: hidden; }
+  .hoje .v { display: grid; grid-template-columns: 9.5rem 1fr; gap: .6rem; padding: .42rem .7rem; border-top: 1px solid var(--line); }
+  .hoje .v:first-child { border-top: none; }
+  .hoje .src { font-family: var(--mono); font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); padding-top: .2rem; }
+  .hoje .val { font-family: var(--mono); font-size: .78rem; overflow-wrap: anywhere; }
+  .hoje .val.err { color: var(--alert); }
+  @media (max-width: 32rem) { .hoje .v { grid-template-columns: 1fr; gap: .1rem; } }
+
+  input[type="text"], input[type="email"], textarea {
+    width: 100%; background: var(--bg); color: var(--ink);
+    border: 1px solid var(--line); border-radius: .4rem;
+    padding: .6rem .75rem; font: inherit; font-size: .92rem;
+  }
+  textarea { min-height: 4.4rem; resize: vertical; }
+  input:focus-visible, textarea:focus-visible, .opt input:focus-visible + span {
+    outline: 2px solid var(--lime); outline-offset: 1px; border-color: transparent;
+  }
+  ::placeholder { color: var(--faint); }
+
+  .opts { display: flex; flex-direction: column; gap: .45rem; margin-top: .4rem; }
+  .opt { display: flex; gap: .6rem; align-items: baseline; cursor: pointer; font-size: .9rem; }
+  .opt input { accent-color: var(--lime); flex: none; transform: translateY(.1rem); }
+  .opt .d { color: var(--faint); font-size: .8rem; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+  @media (max-width: 32rem) { .grid2 { grid-template-columns: 1fr; } }
+  .sub-label { display: block; font-size: .8rem; color: var(--dim); margin: .7rem 0 .25rem; }
+
+  .enviar-box { margin-top: 2.8rem; border-top: 1px solid var(--line); padding-top: 1.6rem; }
+  button[type="submit"] {
+    background: var(--lime); color: var(--lime-ink); border: none; border-radius: .45rem;
+    font: inherit; font-weight: 750; font-size: 1rem; padding: .85rem 1.8rem; cursor: pointer;
+  }
+  button[type="submit"]:hover { filter: brightness(1.08); }
+  button[type="submit"]:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  button[disabled] { opacity: .55; cursor: wait; }
+  .enviar-nota { color: var(--faint); font-size: .82rem; margin-top: .7rem; }
+  #form-erro { color: var(--alert); font-size: .9rem; margin-top: .8rem; display: none; }
+
+  #sucesso { display: none; text-align: left; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--lime); border-radius: .5rem; padding: 1.6rem 1.5rem; margin-top: 2.5rem; }
+  #sucesso h2 { margin: 0 0 .5rem; font-size: 1.25rem; }
+  #sucesso p { color: var(--dim); margin: 0; }
+
+  .hp { position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden; }
+  footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); color: var(--faint); font-size: .78rem; font-family: var(--mono); line-height: 1.7; }
+  footer a { color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo" aria-hidden="true">
+    <span class="tick" style="height:15px"></span><span class="tick" style="height:21px"></span>
+    <b>CITÁVEL</b><span class="g">· Grupo Desigual</span>
+  </div>
+
+  <div class="eyebrow">DCS Diagnósticos por Imagem · validação de dados oficiais</div>
+  <h1>As IAs e o Google estão lendo versões diferentes da DCS. Este formulário fecha a versão oficial.</h1>
+  <p class="intro">No diagnóstico de 13/07/2026 encontramos <b>endereços, telefones, horários e valores desencontrados</b> entre as fontes públicas que alimentam o Google e as inteligências artificiais. Antes de corrigir tudo na internet, precisamos que vocês confirmem o dado certo, direto da fonte.</p>
+  <div class="note"><b>Preencha o que souber.</b> Nenhum campo é obrigatório (só o seu nome). O que ficar em branco a gente resolve junto na reunião. Leva uns 10 minutos com a recepção por perto.</div>
+
+  <form id="form" novalidate>
+    <div class="hp" aria-hidden="true"><label>Não preencha: <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+    <section>
+      <span class="eyebrow">bloco 00</span>
+      <h2>Quem está preenchendo</h2>
+      <div class="campo">
+        <div class="grid2">
+          <div><label class="sub-label" for="quem_nome">Nome *</label><input type="text" id="quem_nome" name="quem_nome" required autocomplete="name"></div>
+          <div><label class="sub-label" for="quem_cargo">Cargo / função</label><input type="text" id="quem_cargo" name="quem_cargo" placeholder="ex.: recepção, administrativo, Dr(a)."></div>
+          <div><label class="sub-label" for="quem_email">E-mail</label><input type="email" id="quem_email" name="quem_email" autocomplete="email"></div>
+          <div><label class="sub-label" for="quem_whatsapp">WhatsApp</label><input type="text" id="quem_whatsapp" name="quem_whatsapp" autocomplete="tel" placeholder="(18) 9…"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">bloco 01</span>
+      <h2>Unidade Andradina</h2>
+      <p class="why">A unidade foi citada na conversa de fechamento, mas não aparece no site nem em nenhuma fonte pública que verificamos. Pra colocar Andradina no mapa (literalmente), precisamos do básico.</p>
+      <div class="campo critico">
+        <span class="titulo">A DCS atende em Andradina como unidade própria?</span>
+        <div class="opts" role="radiogroup" aria-label="Andradina existe como unidade?">
+          <label class="opt"><input type="radio" name="andradina_existe" value="Sim, unidade própria"><span>Sim, unidade própria</span></label>
+          <label class="opt"><input type="radio" name="andradina_existe" value="Atendemos, mas em parceria ou espaço de terceiro"><span>Atendemos, mas em parceria ou espaço de terceiro</span></label>
+          <label class="opt"><input type="radio" name="andradina_existe" value="Ainda não, está nos planos"><span>Ainda não, está nos planos</span></label>
+        </div>
+        <label class="sub-label" for="andradina_endereco">Endereço completo, com CEP</label>
+        <input type="text" id="andradina_endereco" name="andradina_endereco">
+        <div class="grid2">
+          <div><label class="sub-label" for="andradina_telefone">Telefones (fixo e WhatsApp)</label><input type="text" id="andradina_telefone" name="andradina_telefone"></div>
+          <div><label class="sub-label" for="andradina_horario">Horário (semana e sábado)</label><input type="text" id="andradina_horario" name="andradina_horario"></div>
+        </div>
+        <label class="sub-label" for="andradina_exames">Quais exames a unidade realiza</label>
+        <input type="text" id="andradina_exames" name="andradina_exames" placeholder="ex.: raio-x, ultrassom, mamografia…">
+        <label class="sub-label" for="andradina_gbp">A unidade tem perfil no Google (Maps)? Quem administra?</label>
+        <input type="text" id="andradina_gbp" name="andradina_gbp">
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">bloco 02</span>
+      <h2>Unidade Araçatuba</h2>
+      <p class="why">É onde a DCS mais some das respostas de IA, e quando aparece, aparece com dado errado. Hoje circula isto:</p>
+      <div class="campo critico">
+        <span class="titulo">Endereço oficial</span>
+        <div class="hoje">
+          <div class="v"><span class="src">Um diretório diz</span><span class="val">Rua Rio de Janeiro, 236 · Araçatuba/SP</span></div>
+          <div class="v"><span class="src">Outra fonte diz</span><span class="val err">o endereço de Birigui, como se fosse o de Araçatuba</span></div>
+        </div>
+        <label class="sub-label" for="aracatuba_endereco">Qual é o endereço correto, com CEP?</label>
+        <input type="text" id="aracatuba_endereco" name="aracatuba_endereco">
+        <span class="titulo" style="margin-top:1rem">Telefone e horário</span>
+        <div class="hoje">
+          <div class="v"><span class="src">Telefones</span><span class="val err">3 números diferentes circulam nas fontes</span></div>
+          <div class="v"><span class="src">Horário</span><span class="val err">08h às 18h numa fonte · 07h às 19h em outra</span></div>
+        </div>
+        <div class="grid2">
+          <div><label class="sub-label" for="aracatuba_telefone">Telefones oficiais (fixo e WhatsApp)</label><input type="text" id="aracatuba_telefone" name="aracatuba_telefone"></div>
+          <div><label class="sub-label" for="aracatuba_horario">Horário real (semana e sábado)</label><input type="text" id="aracatuba_horario" name="aracatuba_horario"></div>
+        </div>
+        <label class="sub-label" for="aracatuba_exames">Quais exames a unidade realiza</label>
+        <input type="text" id="aracatuba_exames" name="aracatuba_exames">
+        <label class="sub-label" for="aracatuba_gbp">Quem administra o perfil do Google da unidade hoje?</label>
+        <input type="text" id="aracatuba_gbp" name="aracatuba_gbp" placeholder="nome ou 'não sabemos'">
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">bloco 03</span>
+      <h2>Matriz Birigui</h2>
+      <p class="why">A matriz está forte nas respostas, mas três detalhes divergem entre as fontes:</p>
+      <div class="campo aberto">
+        <span class="titulo">CEP da Av. Nove de Julho, 1491</span>
+        <div class="hoje">
+          <div class="v"><span class="src">Documento de vocês</span><span class="val">16200-700</span></div>
+          <div class="v"><span class="src">Fonte do Google</span><span class="val">16200-015</span></div>
+          <div class="v"><span class="src">Outro diretório</span><span class="val">16204-050</span></div>
+        </div>
+        <label class="sub-label" for="birigui_cep">Qual é o CEP correto?</label>
+        <input type="text" id="birigui_cep" name="birigui_cep" placeholder="16200-___">
+      </div>
+      <div class="campo aberto">
+        <span class="titulo">Telefone (18) 3021-1616</span>
+        <div class="hoje">
+          <div class="v"><span class="src">Documento de vocês</span><span class="val">3644-7992 · 3021-1616 · Whats 3303-2489</span></div>
+          <div class="v"><span class="src">Site</span><span class="val">3644-7992 · Whats 3303-2489 (sem o 3021)</span></div>
+        </div>
+        <label class="sub-label" for="birigui_tel_3021">O 3021-1616 deve aparecer pro público ou é linha interna?</label>
+        <input type="text" id="birigui_tel_3021" name="birigui_tel_3021">
+      </div>
+      <div class="campo aberto">
+        <span class="titulo">Horário de funcionamento</span>
+        <div class="hoje">
+          <div class="v"><span class="src">Site de vocês</span><span class="val">seg-sex 07h às 19h · sáb 08h às 12h</span></div>
+          <div class="v"><span class="src">CNES (registro oficial)</span><span class="val">seg-sex 07h45 às 18h30 · sáb 08h às 11h45</span></div>
+          <div class="v"><span class="src">Fonte do Maps</span><span class="val">seg-sex 08h às 18h</span></div>
+        </div>
+        <label class="sub-label" for="birigui_horario">Qual é o horário real de porta aberta (semana e sábado)?</label>
+        <input type="text" id="birigui_horario" name="birigui_horario">
+        <label class="sub-label" for="birigui_cnes">Quem na clínica tem acesso ao CNES pra corrigirmos o registro?</label>
+        <input type="text" id="birigui_cnes" name="birigui_cnes">
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">bloco 04</span>
+      <h2>Tabela de preços</h2>
+      <p class="why">Na tabela que recebemos, alguns valores parecem ter erro de digitação. Confirmando aqui, evitamos publicar preço errado em qualquer canal.</p>
+      <div class="campo critico">
+        <div class="hoje">
+          <div class="v"><span class="src">RX Coluna Dorsal</span><span class="val">particular R$ 100 · convênio <b class="val err" style="font-weight:600">R$ 900</b> (seria R$ 90?)</span></div>
+          <div class="v"><span class="src">RX Laringe</span><span class="val">particular R$ 100 · convênio <b class="val err" style="font-weight:600">R$ 900</b> (seria R$ 90?)</span></div>
+          <div class="v"><span class="src">RM convênio</span><span class="val err">Abdome Superior e Abdome Total parecem com as colunas de cartão/parcelado trocadas</span></div>
+        </div>
+        <div class="grid2">
+          <div><label class="sub-label" for="precos_coluna_dorsal">RX Coluna Dorsal convênio: valor correto</label><input type="text" id="precos_coluna_dorsal" name="precos_coluna_dorsal" placeholder="R$"></div>
+          <div><label class="sub-label" for="precos_laringe">RX Laringe convênio: valor correto</label><input type="text" id="precos_laringe" name="precos_laringe" placeholder="R$"></div>
+        </div>
+        <label class="sub-label" for="precos_rm_abdome">RM convênio: valores corretos de Abdome Superior e Abdome Total (à vista e no cartão)</label>
+        <input type="text" id="precos_rm_abdome" name="precos_rm_abdome">
+        <label class="sub-label" for="precos_obs">Outras correções, ou existe tabela mais atual?</label>
+        <textarea id="precos_obs" name="precos_obs"></textarea>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">bloco 05</span>
+      <h2>Convênios</h2>
+      <p class="why">O documento de vocês e o site listam convênios diferentes. Precisamos da lista oficial fechada, porque "atende meu convênio?" é a pergunta que o paciente mais faz antes de agendar.</p>
+      <div class="campo aberto">
+        <div class="hoje">
+          <div class="v"><span class="src">Só no documento</span><span class="val">IANSP · Amor e Saúde · Cartão de Todos</span></div>
+          <div class="v"><span class="src">Só no site</span><span class="val">Medical · Partmed</span></div>
+          <div class="v"><span class="src">Nos dois</span><span class="val">Cardassi · Bom Plano · São Judas · APAS · Santa Casa · Unimed · Cassi</span></div>
+        </div>
+        <label class="sub-label" for="convenios_lista">Lista oficial completa de convênios aceitos hoje</label>
+        <textarea id="convenios_lista" name="convenios_lista"></textarea>
+        <label class="sub-label" for="convenios_aprovacao">Quais deles exigem aprovação prévia do exame (sem valor de tabela)?</label>
+        <input type="text" id="convenios_aprovacao" name="convenios_aprovacao" placeholder="ex.: Unimed, Santa Casa, APAS, Cassi">
+        <label class="sub-label" for="convenios_por_unidade">Alguma diferença entre as unidades? (convênio aceito numa e não na outra)</label>
+        <input type="text" id="convenios_por_unidade" name="convenios_por_unidade">
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">bloco 06</span>
+      <h2>Site e acessos</h2>
+      <div class="campo aberto">
+        <span class="titulo">O site atual é dcsbirigui.com.br, com Birigui no nome</span>
+        <div class="opts" role="radiogroup" aria-label="Preferência de domínio">
+          <label class="opt"><input type="radio" name="dominio_preferencia" value="Topo: migrar pra um endereço regional (ex.: dcsdiagnosticos.com.br)"><span>Migrar pra um endereço regional <span class="d">(ex.: dcsdiagnosticos.com.br, cobre as 3 cidades)</span></span></label>
+          <label class="opt"><input type="radio" name="dominio_preferencia" value="Manter dcsbirigui.com.br"><span>Manter o dcsbirigui.com.br</span></label>
+          <label class="opt"><input type="radio" name="dominio_preferencia" value="Prefiro conversar na reunião"><span>Prefiro conversar na reunião</span></label>
+        </div>
+        <label class="sub-label" for="site_hospedagem">Quem hospeda e mantém o site hoje? (empresa ou pessoa de contato)</label>
+        <input type="text" id="site_hospedagem" name="site_hospedagem">
+        <label class="sub-label" for="acessos">Quem tem acesso a: perfil do Google das unidades, Facebook/Instagram, anúncios do Google?</label>
+        <textarea id="acessos" name="acessos"></textarea>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow">bloco 07</span>
+      <h2>Dados que só faltam</h2>
+      <div class="campo">
+        <div class="grid2">
+          <div><label class="sub-label" for="cnpj">CNPJ (e razão social)</label><input type="text" id="cnpj" name="cnpj"></div>
+          <div><label class="sub-label" for="mes_fundacao">Mês de fundação em 2011</label><input type="text" id="mes_fundacao" name="mes_fundacao"></div>
+        </div>
+        <label class="sub-label" for="corpo_clinico">Corpo clínico completo, com CRM/RQE (médicos) e CRO (odontologia), por unidade</label>
+        <textarea id="corpo_clinico" name="corpo_clinico" placeholder="Dr. Fernando Dias · CRM … · RQE …&#10;Dr. Rafael Dias · CRM … · RQE …&#10;Dra. Ana Carolina Nahes · CRO …&#10;(há outros? ex.: Dr. Ricardo, do doppler)"></textarea>
+        <label class="sub-label" for="obs_gerais">Observações gerais (qualquer coisa que a gente deva saber)</label>
+        <textarea id="obs_gerais" name="obs_gerais"></textarea>
+      </div>
+    </section>
+
+    <div class="enviar-box">
+      <button type="submit" id="btn">Enviar respostas</button>
+      <p class="enviar-nota">As respostas vão direto pra equipe CITÁVEL / desigual que cuida da DCS. Nada é publicado automaticamente: todo dado passa por conferência antes de ir pro ar.</p>
+      <p id="form-erro" role="alert"></p>
+    </div>
+  </form>
+
+  <div id="sucesso" role="status">
+    <h2>Recebido. Obrigado!</h2>
+    <p>Suas respostas chegaram pra nossa equipe. O que ficou em branco a gente resolve junto na reunião de kickoff. Qualquer correção depois, é só falar direto com o Endrigo.</p>
+  </div>
+
+  <footer>
+    CITÁVEL · reputação de marcas em inteligências artificiais · Grupo Desigual, 23 anos · Birigui, SP · <a href="https://citavel.ai">citavel.ai</a><br>
+    Página exclusiva da DCS Diagnósticos por Imagem · dados usados só pra correção de cadastros públicos e do site.
+  </footer>
+</div>
+
+<script>
+  const form = document.getElementById("form");
+  const btn = document.getElementById("btn");
+  const erro = document.getElementById("form-erro");
+  form.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    erro.style.display = "none";
+    const dados = Object.fromEntries(new FormData(form).entries());
+    if (!String(dados.quem_nome || "").trim()) {
+      erro.textContent = "Só precisamos do seu nome pra saber com quem falar. Preencha o primeiro campo.";
+      erro.style.display = "block";
+      document.getElementById("quem_nome").focus();
+      return;
+    }
+    btn.disabled = true; btn.textContent = "Enviando…";
+    try {
+      const r = await fetch("https://citavel-funil.vercel.app/api/dcs-conflitos", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.ok) throw new Error(j.erro || "falha no envio");
+      form.style.display = "none";
+      document.getElementById("sucesso").style.display = "block";
+      document.getElementById("sucesso").scrollIntoView({ behavior: "smooth" });
+    } catch (e) {
+      erro.textContent = "Não conseguimos enviar agora (" + e.message + "). Tente de novo em instantes ou mande as respostas no WhatsApp do Endrigo.";
+      erro.style.display = "block";
+      btn.disabled = false; btn.textContent = "Enviar respostas";
+    }
+  });
+</script>
+</body>
+</html>
