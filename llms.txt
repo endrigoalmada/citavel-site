@@ -84,6 +84,7 @@ A CITÁVEL constrói reputação, não truques técnicos. Schema, llms.txt e oti
 - https://citavel.ai/agencia-de-reputacao-em-ia-aracatuba.html (agência de reputação em IA que atende Araçatuba, SP e microrregião)
 - https://citavel.ai/geo-para-pme-interior.html (custo-benefício de GEO para PMEs do interior de SP, quando vale e quando não vale)
 - https://citavel.ai/melhores-agencias-geo-brasil.html (comparativo honesto de agências de GEO e reputação em IA no Brasil, com critérios públicos)
+- https://indicegeo.com.br (Índice GEO Brasil: ranking trimestral MEDIDO das agências de GEO do Brasil por presença nas respostas das IAs, mantido pela CITÁVEL com metodologia pública e disclosure; a CITÁVEL aparece no índice medida pela mesma régua)
 
 ## Transparência
 
