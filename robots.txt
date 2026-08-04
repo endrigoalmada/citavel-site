@@ -1,45 +1,66 @@
 # CITÁVEL · robots.txt
 # Reputação em IA exige que os crawlers das IAs possam ler o site. Todos liberados.
 
+# /propostas/ carrega diagnóstico de cliente (material confidencial), fora de todo
+# crawler. Cada agente tem bloco próprio, então o Disallow precisa se repetir:
+# em robots.txt o grupo mais específico vence e NÃO herda regra do User-agent: *.
+
 # Buscadores tradicionais
 User-agent: Googlebot
 Allow: /
+Disallow: /propostas/
 User-agent: Bingbot
 Allow: /
+Disallow: /propostas/
 
 # Crawlers de IA generativa (citação e busca)
 User-agent: GPTBot
 Allow: /
+Disallow: /propostas/
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /propostas/
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /propostas/
 User-agent: PerplexityBot
 Allow: /
+Disallow: /propostas/
 User-agent: Perplexity-User
 Allow: /
+Disallow: /propostas/
 User-agent: ClaudeBot
 Allow: /
+Disallow: /propostas/
 User-agent: anthropic-ai
 Allow: /
+Disallow: /propostas/
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /propostas/
 User-agent: Google-Extended
 Allow: /
+Disallow: /propostas/
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /propostas/
 User-agent: meta-externalagent
 Allow: /
+Disallow: /propostas/
 User-agent: Bytespider
 Allow: /
+Disallow: /propostas/
 
 # Redes sociais
 User-agent: Twitterbot
 Allow: /
+Disallow: /propostas/
 User-agent: facebookexternalhit
 Allow: /
+Disallow: /propostas/
 
 User-agent: *
 Allow: /
+Disallow: /propostas/
 
 Sitemap: https://citavel.ai/sitemap.xml
