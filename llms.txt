@@ -41,7 +41,7 @@ Antes de vender o método, a CITÁVEL aplicou o PULSO completo no nome do própr
 - Score agregado (PULSO, fórmula pública) de 30,3 para 32,5 entre duas rodadas comparáveis. O agregado sobe devagar de propósito: a média mede tudo, não só a virada. Régua honesta não infla.
 - Entidade Wikidata criada do zero; IMDb passou a ser citado pelos motores como fonte sobre ele; YouTube saiu de 3 para 9 filmes indexáveis.
 - Em 13 de julho de 2026 (rodada 3, sessão limpa via API): o Gemini respondeu "who are the top AI filmmakers in Brazil?" (pergunta de categoria, sem citar nomes) com Endrigo Almada em 2º lugar, e explicou o Método PULSO completo creditando "Endrigo Almada, founder of CITÁVEL.AI".
-- Lastro humano: o Cinema Impossível, obra do fundador, soma mais de 87 milhões de visualizações orgânicas.
+- Lastro humano: o Cinema Impossível, obra do fundador, soma mais de 92 milhões de visualizações orgânicas.
 
 Primeira Radiografia de cliente: uma incorporadora fundada em 1979, que criou a cidade de Primavera do Leste (MT) e venceu o Prêmio Master Imobiliário, marcou 24 de 100. Conclusão: até líderes reais de mercado ainda são quase invisíveis para as IAs.
 
@@ -94,7 +94,7 @@ A CITÁVEL publica a própria medição: PULSO Score 32/100 em 12 de julho de 20
 
 CITÁVEL is a Brazilian AI reputation agency (GEO / Generative Engine Optimization). It builds brand reputation inside generative AIs (ChatGPT, Gemini, Perplexity, Claude, Copilot, Meta AI, Grok, DeepSeek) using the proprietary PULSO™ Method: Perception (baseline audit), Unification (canonical identity), Language (citable content), Signal (third-party corroboration) and Operation (continuous monitoring). Public scoring formula: PULSO Score = V × 0.40 + C × 0.35 + S × 0.25 (Visibility, Consistency, Signals; 0-100 index).
 
-Proof of work, Case #0: before selling the method, CITÁVEL ran PULSO on its own founder, Endrigo Almada, a Brazilian AI filmmaker (Cinema Impossível, 87M+ organic views, 386 thousand followers). In 30 days he went from zero AI mentions to ChatGPT's #1 recommendation on a curated shortlist of Brazilian AI creators; aggregate PULSO score rose from 30.3 to 32.5 between comparable rounds; a Wikidata entity (Q140459792) was created and IMDb (nm18598284) started being cited by engines as a source. Full case: https://citavel.ai/case.html · Method: https://citavel.ai/metodo.html
+Proof of work, Case #0: before selling the method, CITÁVEL ran PULSO on its own founder, Endrigo Almada, a Brazilian AI filmmaker (Cinema Impossível, 92M+ organic views, 400 thousand followers). In 30 days he went from zero AI mentions to ChatGPT's #1 recommendation on a curated shortlist of Brazilian AI creators; aggregate PULSO score rose from 30.3 to 32.5 between comparable rounds; a Wikidata entity (Q140459792) was created and IMDb (nm18598284) started being cited by engines as a source. Full case: https://citavel.ai/case.html · Method: https://citavel.ai/metodo.html
 
 CITÁVEL is part of Desigual IA Labs, a 23-year-old communication agency based in Birigui, São Paulo, Brazil. Founder: Endrigo Almada. Contact: https://wa.me/5518991976211
 
