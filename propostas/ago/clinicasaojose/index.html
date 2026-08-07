@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>citável · Resultados e plano de trabalho · Clínica São José</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS (padrão canônico HP · as imagens mandam) ============ */
+:root{
+  --ink:#0A0A0E;
+  --ink-deep:#050508;
+  --plum-dark:#1A0F2E;
+  --plum-mid:#241440;
+  --roxo:#8B5CF6;
+  --roxo-deep:#6D28D9;
+  --roxo-muted:#A78BFA;
+  --magenta:#C026D3;
+  --lima:#B8D62E;
+  --lima-dim:#96AF22;
+  --warm-white:#F0EDE6;
+  --cream:#FAF8F4;
+  --zinc-400:#A1A1AA;
+  --zinc-500:#71717A;
+  --glass:rgba(36,20,64,.42);
+  --glass-border:rgba(255,255,255,.08);
+
+  --title-size:clamp(2rem,5.2vw,4.6rem);
+  --h2-size:clamp(1.4rem,3.4vw,2.6rem);
+  --h3-size:clamp(1rem,2.2vw,1.5rem);
+  --body-size:clamp(.78rem,1.35vw,1.05rem);
+  --small-size:clamp(.62rem,.95vw,.82rem);
+  --mono-size:clamp(.55rem,.85vw,.75rem);
+  --slide-padding:clamp(1.2rem,4.5vw,4.5rem);
+  --content-gap:clamp(.6rem,2vw,1.8rem);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow-x:hidden}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{
+  font-family:'General Sans','Space Grotesk',system-ui,sans-serif;
+  background:var(--ink);color:var(--warm-white);
+  font-size:var(--body-size);line-height:1.6;
+}
+::selection{background:var(--lima);color:var(--ink)}
+
+.slide{
+  width:100vw;height:100vh;height:100dvh;overflow:hidden;
+  scroll-snap-align:start;display:flex;flex-direction:column;position:relative;
+  background:radial-gradient(120% 90% at 85% -10%,rgba(109,40,217,.28) 0%,transparent 55%),
+             radial-gradient(90% 70% at -5% 105%,rgba(139,92,246,.16) 0%,transparent 50%),
+             linear-gradient(160deg,var(--ink-deep) 0%,var(--ink) 45%,var(--plum-dark) 100%);
+}
+.slide-content{
+  flex:1;display:flex;flex-direction:column;justify-content:center;
+  max-height:100%;overflow:hidden;padding:var(--slide-padding);
+  max-width:1440px;margin:0 auto;width:100%;position:relative;z-index:2;
+}
+
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+h1{font-size:var(--title-size);font-weight:300;line-height:.97;letter-spacing:-.04em}
+h2{font-size:var(--h2-size);font-weight:300;line-height:1.04;letter-spacing:-.03em}
+h3{font-size:var(--h3-size);font-weight:400;line-height:1.15;letter-spacing:-.01em}
+.mono{font-family:'Space Mono',monospace;font-size:var(--mono-size);
+  text-transform:uppercase;letter-spacing:.09em}
+.kicker{font-family:'Space Mono',monospace;font-size:var(--mono-size);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--roxo-muted);
+  transform:rotate(-2deg);transform-origin:left bottom;display:inline-block;
+  margin-bottom:clamp(.6rem,1.6vh,1.2rem)}
+.hl{color:var(--lima)}
+.hl-roxo{color:var(--roxo-muted)}
+.muted{color:var(--zinc-400)}
+.small{font-size:var(--small-size)}
+strong{font-weight:500;color:var(--cream)}
+
+.glass{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);padding:clamp(.7rem,1.8vw,1.6rem)}
+.gold-rule{height:1px;background:linear-gradient(90deg,var(--lima-dim),transparent);
+  border:none;margin:clamp(.5rem,1.4vh,1rem) 0}
+.grid{display:grid;gap:clamp(.5rem,1.4vw,1.1rem)}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.num{font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:-.03em;
+  font-size:clamp(1.6rem,3.6vw,3rem);line-height:1;color:var(--lima)}
+.tag{display:inline-block;font-family:'Space Mono',monospace;font-size:var(--mono-size);
+  text-transform:uppercase;letter-spacing:.08em;padding:.3em .8em;
+  border:1px solid var(--glass-border);color:var(--zinc-400)}
+.tag.on{border-color:var(--lima-dim);color:var(--lima)}
+.tag.bad{border-color:rgba(192,38,211,.5);color:var(--magenta)}
+.glitch-bar{position:absolute;left:-2%;right:-2%;bottom:clamp(1rem,4vh,2.6rem);
+  transform:rotate(.3deg);background:var(--lima);color:var(--ink);
+  font-family:'Space Mono',monospace;font-weight:700;font-size:var(--mono-size);
+  text-transform:uppercase;letter-spacing:.1em;padding:.55em 3em;white-space:nowrap;overflow:hidden;z-index:3}
+.rfp-ref{position:absolute;right:var(--slide-padding);top:clamp(1rem,3.5vh,2.2rem);
+  font-family:'Space Mono',monospace;font-size:var(--mono-size);color:var(--zinc-500);
+  text-transform:uppercase;letter-spacing:.1em;z-index:4}
+.logo-word{font-family:'Space Grotesk',sans-serif;font-weight:400;letter-spacing:-.02em;
+  color:var(--cream);text-transform:lowercase}
+
+.diag-row{display:grid;grid-template-columns:1fr auto auto;gap:clamp(.5rem,1.5vw,1.2rem);
+  align-items:center;padding:clamp(.4rem,1.2vh,.8rem) 0;border-bottom:1px solid var(--glass-border)}
+.diag-q{font-size:var(--small-size);color:var(--warm-white);line-height:1.4}
+.diag-q em{font-style:normal;color:var(--zinc-400)}
+
+.fase{border-left:1px solid var(--glass-border);padding-left:clamp(.7rem,1.6vw,1.3rem);position:relative}
+.fase::before{content:'';position:absolute;left:-3px;top:.35em;width:5px;height:5px;background:var(--lima)}
+
+.nav-dots{position:fixed;right:clamp(.6rem,1.4vw,1.4rem);top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:.55rem;z-index:50}
+.nav-dots button{width:6px;height:6px;border:none;background:var(--zinc-500);cursor:pointer;
+  transition:all .3s;padding:0}
+.nav-dots button.active{background:var(--lima);height:18px}
+.slide-counter{position:fixed;left:var(--slide-padding);bottom:clamp(.8rem,2.5vh,1.6rem);
+  font-family:'Space Mono',monospace;font-size:var(--mono-size);color:var(--zinc-500);
+  letter-spacing:.1em;z-index:50}
+.progress{position:fixed;top:0;left:0;height:2px;background:var(--lima);width:0%;z-index:60;transition:width .4s}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.slide.in .rv{opacity:1;transform:none}
+.slide.in .rv:nth-child(1),.slide.in .d1{transition-delay:.05s}
+.slide.in .d2{transition-delay:.16s}
+.slide.in .d3{transition-delay:.27s}
+.slide.in .d4{transition-delay:.38s}
+.slide.in .d5{transition-delay:.49s}
+.slide.in .d6{transition-delay:.6s}
+.slide.in .d7{transition-delay:.71s}
+
+@media screen and (max-height:620px){.rfp-ref{display:none}}
+@media screen and (max-width:820px){.g2,.g3{grid-template-columns:1fr}.diag-row{grid-template-columns:1fr auto}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important}
+  html{scroll-behavior:auto}.rv{opacity:1;transform:none}
+}
+@media print{
+  @page{size:508mm 285.75mm;margin:0}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{height:auto!important;overflow:visible!important}
+  html{scroll-snap-type:none}
+  .nav-dots,.slide-counter,.progress{display:none!important}
+  .slide{page-break-after:always;break-after:page;width:508mm!important;height:285.75mm!important}
+  .rv{opacity:1!important;transform:none!important}
+  .glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(36,20,64,.72)}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<!-- ========== 01 CAPA ========== -->
+<section class="slide" id="s1">
+  <div class="slide-content">
+    <p class="mono rv d1" style="color:var(--zinc-400)">Birigui, 7 de agosto de 2026 · reunião de apresentação · confidencial</p>
+    <div style="height:clamp(1rem,4vh,2.5rem)"></div>
+    <p class="kicker rv d2">// resultados da medição + plano de trabalho</p>
+    <h1 class="rv d3">O que as IAs respondem<br>sobre a <span class="hl">Clínica São José</span>,<br>e o que vamos fazer com isso.</h1>
+    <div style="height:clamp(1rem,3.5vh,2rem)"></div>
+    <p class="rv d4 muted" style="max-width:46ch">Dr. Henrique Hayashi · Dr. Haruo Hayashi · Clínica São José<br>Preparada pela <span class="logo-word" style="color:var(--cream)">citável</span>, a agência de reputação em IA do Grupo Desigual, 23 anos, também de Birigui.</p>
+  </div>
+  <div class="glitch-bar rv d5">quando o paciente pergunta, o médico é a resposta · citável · grupo desigual</div>
+</section>
+
+<!-- ========== 02 O CAMINHO REVERSO ========== -->
+<section class="slide" id="s2">
+  <span class="rfp-ref">// o novo comportamento do paciente</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// como o paciente decide em 2026</p>
+    <h2 class="rv d2">Ninguém pergunta pelo médico.<br>Perguntam <span class="hl">pela dor</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g3">
+      <div class="glass rv d3">
+        <p class="mono hl-roxo">1 · o sintoma</p>
+        <hr class="gold-rule">
+        <p class="small">O paciente abre o ChatGPT ou o Gemini com vergonha e medo: <strong>"estou com sangramento, é grave?"</strong>. Antes de qualquer médico, ele conversa com a IA.</p>
+      </div>
+      <div class="glass rv d4">
+        <p class="mono hl-roxo">2 · a explicação</p>
+        <hr class="gold-rule">
+        <p class="small">A IA explica a condição, acalma ou alerta, e orienta: <strong>"procure um especialista"</strong>. É aqui que a confiança se forma, na fonte que a IA usa pra responder.</p>
+      </div>
+      <div class="glass rv d5">
+        <p class="mono hl-roxo">3 · a recomendação</p>
+        <hr class="gold-rule">
+        <p class="small">Só então vem a pergunta final: <strong>"quem resolve isso perto de mim?"</strong>. Quem foi citado na etapa da explicação chega aqui com autoridade emprestada.</p>
+      </div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d6"><strong class="hl">77% das pessoas já se satisfazem com o resumo da IA</strong> <span class="muted">e nem rolam a página (Adobe, 2025). O caminho do paciente novo é reverso: da dor até o nome.</span></p>
+  </div>
+</section>
+
+<!-- ========== 03 MEDIMOS DUAS VEZES ========== -->
+<section class="slide" id="s3">
+  <span class="rfp-ref">// medições · 22 jul e 07 ago 2026</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// nós medimos duas vezes antes desta conversa</p>
+    <h2 class="rv d2">Em 16 dias, as mesmas perguntas<br><span class="hl">inverteram de resposta</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="rv d3">
+      <div class="diag-row">
+        <p class="diag-q">"O Dr. Henrique Hayashi é um bom proctologista em Birigui?"</p>
+        <span class="tag on">22/07 · aparece bem</span>
+        <span class="tag bad">07/08 · esfriou</span>
+      </div>
+      <div class="diag-row">
+        <p class="diag-q">"Qual clínica tem bom proctologista em Birigui?"</p>
+        <span class="tag bad">22/07 · não aparece</span>
+        <span class="tag on">07/08 · em 1º no Gemini</span>
+      </div>
+      <div class="diag-row">
+        <p class="diag-q">"Quero um bom médico gastroenterologista em Birigui, qual você indica?" <em>· Dr. Haruo</em></p>
+        <span class="tag bad">22/07 · ausente</span>
+        <span class="tag bad">07/08 · segue ausente</span>
+      </div>
+      <div class="diag-row" style="border-bottom:none">
+        <p class="diag-q">"O Dr. Haruo Hayashi é um bom gastroenterologista?"</p>
+        <span class="tag bad">22/07 · com erro</span>
+        <span class="tag bad">07/08 · identidade confusa</span>
+      </div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d5"><strong class="hl">A resposta da IA não é estável: muda todo mês.</strong> <span class="muted">Quem aparece hoje pode sumir amanhã, e vice-versa. Presença em IA não se conquista uma vez; se cuida continuamente.</span></p>
+    <p class="rv d6 small muted" style="margin-top:.4em">22/07: 30 medições (Gemini e ChatGPT, com busca) · 07/08: 24 medições (Gemini e Perplexity) · sessões limpas via API · respostas na íntegra disponíveis.</p>
+  </div>
+</section>
+
+<!-- ========== 04 O PLACAR ========== -->
+<section class="slide" id="s4">
+  <span class="rfp-ref">// o retrato de partida</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// o placar das três marcas</p>
+    <h2 class="rv d2">Três reputações, um problema:<br>a <span class="hl">categoria</span> está aberta.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g3">
+      <div class="glass rv d3">
+        <p class="mono hl-roxo">Dr. Henrique Hayashi</p>
+        <hr class="gold-rule">
+        <p class="num">6<span style="font-size:.5em;color:var(--zinc-400)">/10</span></p>
+        <p class="small muted" style="margin-top:.4em">Recomendação principal em 6 medições. <strong>Ausente em 4</strong>, justamente nas perguntas de quem ainda não conhece o médico. E o Perplexity chega a confundi-lo com um médico de outro estado.</p>
+      </div>
+      <div class="glass rv d4">
+        <p class="mono hl-roxo">Dr. Haruo Hayashi</p>
+        <hr class="gold-rule">
+        <p class="num">4<span style="font-size:.5em;color:var(--zinc-400)">/10</span></p>
+        <p class="small muted" style="margin-top:.4em">Ausente em 4 medições e <strong>com informação errada em 2</strong>. As IAs só o conhecem pelo nome de registro, não pelo nome que os pacientes usam: a identidade digital está dividida.</p>
+      </div>
+      <div class="glass rv d5">
+        <p class="mono hl-roxo">Clínica São José</p>
+        <hr class="gold-rule">
+        <p class="num">6<span style="font-size:.5em;color:var(--zinc-400)">/10</span></p>
+        <p class="small muted" style="margin-top:.4em">Aparece, mas quase sempre <strong>na lista, não como resposta</strong>. Recomendação principal em só 2 das 10 medições.</p>
+      </div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d6 small"><strong>Nada disso é falta de mérito clínico. É falta de estrutura digital que as IAs consigam ler.</strong> <span class="muted">Quando o paciente já sabe o nome, a IA encontra. Quando pergunta pelo problema, ela entrega outros nomes.</span></p>
+  </div>
+</section>
+
+<!-- ========== 05 A TESE ========== -->
+<section class="slide" id="s5">
+  <span class="rfp-ref">// a estratégia</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// a tese do trabalho</p>
+    <h2 class="rv d2">Autoridade se constrói onde a IA<br><span class="hl">explica a doença</span>, não onde ela<br>recomenda o médico.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="rv d3 small" style="display:flex;flex-direction:column;gap:clamp(.45rem,1.3vh,.9rem);max-width:72ch">
+      <p><span class="hl-roxo mono">01</span>&nbsp; Conteúdo <strong>por patologia, assinado pelos médicos</strong>: hemorroida, fissura, sangramento, colonoscopia, endoscopia, refluxo, o mapa completo do que a clínica trata.</p>
+      <p><span class="hl-roxo mono">02</span>&nbsp; Cada conteúdo responde <strong>na linguagem de quem tem o sintoma</strong>, não na linguagem de médico. É essa a fonte que a IA busca quando o paciente descreve a dor.</p>
+      <p><span class="hl-roxo mono">03</span>&nbsp; Com dados estruturados e consistência entre canais, o objetivo é que, ao explicar a condição, <strong>a IA cite quem escreveu</strong>: Dr. Henrique, Dr. Haruo, Clínica São José.</p>
+      <p><span class="hl-roxo mono">04</span>&nbsp; Tudo dentro do <strong>Manual de Publicidade Médica (CFM)</strong>: informação e educação, sem promessa de resultado clínico, com revisão dos próprios médicos antes de publicar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 06 O TRABALHO · FUNDAÇÃO ========== -->
+<section class="slide" id="s6">
+  <span class="rfp-ref">// como vai ser o trabalho · 1 de 2</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// como vai ser o trabalho · parte 1 · a fundação</p>
+    <h2 class="rv d2">Primeiro, a <span class="hl">casa arrumada</span>:<br>o que as IAs leem sobre vocês.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g2">
+      <div class="glass rv d3">
+        <p class="mono hl-roxo">Novo site completo da clínica</p>
+        <hr class="gold-rule">
+        <p class="small">Site novo da Clínica São José, construído citável desde a fundação: especialidades, exames (endoscopia, colonoscopia), corpo clínico, convênios, agendamento. <strong>Dados estruturados e arquitetura que as IAs leem.</strong></p>
+      </div>
+      <div class="glass rv d4">
+        <p class="mono hl-roxo">Landing pages por frente</p>
+        <hr class="gold-rule">
+        <p class="small">LPs dedicadas às frentes que trazem paciente novo (exames e principais condições), <strong>cada uma respondendo uma intenção de busca</strong>, conectadas ao site e prontas pra campanhas.</p>
+      </div>
+      <div class="glass rv d5">
+        <p class="mono hl-roxo">Faxina no Google Meu Negócio</p>
+        <hr class="gold-rule">
+        <p class="small">Revisão completa dos perfis das três marcas: categorias, horários, fotos, serviços, perguntas e respostas, avaliações. <strong>Nome, endereço e telefone consistentes em todos os diretórios</strong> (Doctoralia e afins inclusos). É a primeira fonte que os motores conferem.</p>
+      </div>
+      <div class="glass rv d6">
+        <p class="mono hl-roxo">Fotos profissionais da clínica e equipe</p>
+        <hr class="gold-rule">
+        <p class="small">Sessão no <strong>estúdio próprio da Desigual</strong> (sede de 1.000m² em Birigui) + ensaio na clínica. Banco de imagens real dos médicos, da equipe e da estrutura: site, perfis, matérias e conteúdo sem foto de banco.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 07 O TRABALHO · AUTORIDADE ========== -->
+<section class="slide" id="s7">
+  <span class="rfp-ref">// como vai ser o trabalho · 2 de 2</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// como vai ser o trabalho · parte 2 · autoridade contínua</p>
+    <h2 class="rv d2">Depois, a <span class="hl">voz</span>: os médicos<br>presentes onde a IA aprende.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g2">
+      <div class="glass rv d3">
+        <p class="mono hl-roxo">Blog de cada profissional</p>
+        <hr class="gold-rule">
+        <p class="small">Cada médico com o seu espaço de conteúdo por patologia, <strong>auditado e orientado pela CITÁVEL</strong>: nós definimos pauta, estrutura citável e revisão técnica de forma; o médico assina e valida o conteúdo clínico. Corrige na fonte, inclusive, os erros que as IAs repetem hoje.</p>
+      </div>
+      <div class="glass rv d4">
+        <p class="mono hl-roxo">Matérias e sinais de terceiros</p>
+        <hr class="gold-rule">
+        <p class="small">Presença fora da casa própria: matérias, entrevistas e menções em veículos e portais da região. <strong>A IA confia mais em quem os outros citam</strong> do que em quem fala de si mesmo.</p>
+      </div>
+      <div class="glass rv d5">
+        <p class="mono hl-roxo">Identidade canônica dos médicos</p>
+        <hr class="gold-rule">
+        <p class="small">Definição do <strong>nome oficial de cada médico</strong> e unificação em todas as fontes (CRM, diretórios, perfis, site). A medição mostrou que a identidade dividida entre nome de registro e nome de consultório confunde as IAs, e paciente confuso não agenda.</p>
+      </div>
+      <div class="glass rv d6" style="border-color:var(--lima-dim)">
+        <p class="mono hl">Exclusivo · o cérebro do Dr. Henrique</p>
+        <hr class="gold-rule">
+        <p class="small">Um <strong>segundo cérebro personalizado</strong>, montado pelo próprio Endrigo Almada no setup de implantação: base de conhecimento organizada (condutas, temas, linguagem própria) que fica como <strong>ativo permanente do médico</strong> e alimenta todo o conteúdo assinado por ele.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 08 MÉTODO E MEDIÇÃO ========== -->
+<section class="slide" id="s8">
+  <span class="rfp-ref">// método pulso · medição</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// como medimos (a régua é pública)</p>
+    <h2 class="rv d2">Método PULSO: medir antes,<br>trabalhar as fontes, <span class="hl">remedir<br>todo mês</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g3">
+      <div class="fase rv d3">
+        <p class="mono hl">Radiografia completa</p>
+        <div style="height:.6em"></div>
+        <p class="small muted">120+ medições em vários motores de IA, com as perguntas reais do paciente. Sai com <strong style="color:var(--warm-white)">PULSO Score de 0 a 100</strong> das três marcas: a foto do antes, auditável.</p>
+      </div>
+      <div class="fase rv d4">
+        <p class="mono hl">Trabalho nas fontes</p>
+        <div style="height:.6em"></div>
+        <p class="small muted">Tudo que está nos slides anteriores: site, LPs, Google Meu Negócio, fotos, blogs, matérias. <strong style="color:var(--warm-white)">A IA não tem opinião própria: reflete um consenso de fontes.</strong> Nosso trabalho é construir esse consenso.</p>
+      </div>
+      <div class="fase rv d5">
+        <p class="mono hl">Remedição mensal</p>
+        <div style="height:.6em"></div>
+        <p class="small muted">Todo mês, o score de novo, com relatório do que subiu, do que falta e do que vem. Como as respostas de 22/07 e 07/08 mostraram, <strong style="color:var(--warm-white)">isso muda em semanas</strong>: por isso o trabalho é contínuo.</p>
+      </div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d6 small"><strong>A régua honesta:</strong> <span class="muted">nunca prometemos citação garantida nem prazo de resultado, porque ninguém controla a resposta de uma IA. Prometemos método, trabalho nas fontes e medição transparente. A CITÁVEL publicou o próprio score, 32/100, porque a régua vale pra todo mundo, inclusive pra gente.</span></p>
+  </div>
+</section>
+
+<!-- ========== 09 QUEM ENTREGA ========== -->
+<section class="slide" id="s9">
+  <span class="rfp-ref">// quem entrega</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// quem vai cuidar disso</p>
+    <h2 class="rv d2"><span class="logo-word">citável</span>, do Grupo Desigual.<br>23 anos, <span class="hl">de Birigui</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+      <div class="glass rv d3"><p class="num">23</p><p class="mono muted" style="margin-top:.5em">anos de agência por trás</p></div>
+      <div class="glass rv d4"><p class="num">1ª</p><p class="mono muted" style="margin-top:.5em">metodologia brasileira de GEO</p></div>
+      <div class="glass rv d5"><p class="num">0→1º</p><p class="mono muted" style="margin-top:.5em">case #0: de zero a nº 1 no ChatGPT em 30 dias</p></div>
+      <div class="glass rv d6"><p class="num">1.000<span style="font-size:.5em">m²</span></p><p class="mono muted" style="margin-top:.5em">sede com estúdio próprio</p></div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g2">
+      <p class="rv d6 small"><strong>O Case #0 fomos nós mesmos:</strong> aplicamos o Método PULSO na marca do fundador e saímos de zero respostas para primeiro lugar na resposta do ChatGPT em 30 dias, com toda a medição documentada e auditável. Cada mercado tem a sua briga, mas o método é esse.</p>
+      <p class="rv d7 small"><strong>Estrutura completa em casa:</strong> estratégia, tecnologia, conteúdo, design e o estúdio de foto e vídeo onde os médicos e a equipe serão fotografados. Tudo dentro do Grupo Desigual, tudo em Birigui, do lado da clínica.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 10 CONTRACAPA ========== -->
+<section class="slide" id="s10">
+  <div class="slide-content">
+    <p class="kicker rv d1">// próximos passos</p>
+    <h1 class="rv d2" style="font-size:clamp(1.8rem,4.4vw,3.8rem)">A clínica passou décadas<br>cuidando de Birigui.<br><span class="hl">Agora é a IA que precisa<br>ficar sabendo.</span></h1>
+    <div style="height:var(--content-gap)"></div>
+    <div class="rv d4 small" style="display:flex;gap:clamp(1.5rem,4vw,3.5rem);flex-wrap:wrap">
+      <div><p class="mono hl-roxo">01 · alinhamento</p><p class="muted">esta conversa: escopo, prioridades e ajustes</p></div>
+      <div><p class="mono hl-roxo">02 · assinatura</p><p class="muted">contrato conforme a proposta enviada e agendamento das fotos</p></div>
+      <div><p class="mono hl-roxo">03 · fundação</p><p class="muted">Radiografia PULSO, faxina do Google e sites em produção na semana 1</p></div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d5 small muted">Condições de investimento na proposta enviada, válida até 22/08/2026 · Endrigo Almada · endrigo@citavel.ai · citavel.ai<br><span class="logo-word" style="font-size:1.3em;color:var(--cream)">citável</span> <span class="mono" style="color:var(--zinc-500)">· grupo desigual · quando o cliente pergunta, a marca é a resposta.</span></p>
+  </div>
+</section>
+
+<nav class="nav-dots" id="dots" aria-label="Navegação de slides"></nav>
+<div class="slide-counter" id="counter">01 / 10</div>
+
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  const dots=document.getElementById('dots');
+  const counter=document.getElementById('counter');
+  const progress=document.getElementById('progress');
+  let current=0;
+
+  slides.forEach((s,i)=>{
+    const b=document.createElement('button');
+    b.setAttribute('aria-label','Slide '+(i+1));
+    b.addEventListener('click',()=>slides[i].scrollIntoView({behavior:'smooth'}));
+    dots.appendChild(b);
+  });
+  const dotBtns=[...dots.children];
+
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        current=slides.indexOf(e.target);
+        counter.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+        progress.style.width=((current+1)/slides.length*100)+'%';
+        dotBtns.forEach((d,i)=>d.classList.toggle('active',i===current));
+      }
+    });
+  },{threshold:.55});
+  slides.forEach(s=>io.observe(s));
+
+  function go(n){
+    const t=Math.max(0,Math.min(slides.length-1,n));
+    slides[t].scrollIntoView({behavior:'smooth'});
+  }
+  addEventListener('keydown',e=>{
+    if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(current+1)}
+    if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(current-1)}
+    if(e.key==='Home'){e.preventDefault();go(0)}
+    if(e.key==='End'){e.preventDefault();go(slides.length-1)}
+  });
+
+  let touchY=null;
+  addEventListener('touchstart',e=>{touchY=e.touches[0].clientY},{passive:true});
+  addEventListener('touchend',e=>{
+    if(touchY===null)return;
+    const dy=touchY-e.changedTouches[0].clientY;
+    if(Math.abs(dy)>60)go(current+(dy>0?1:-1));
+    touchY=null;
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
