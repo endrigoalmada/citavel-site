@@ -45,7 +45,7 @@ Antes de vender o método, a CITÁVEL aplicou o PULSO completo no nome do própr
 
 Primeira Radiografia de cliente: uma incorporadora fundada em 1979, que criou a cidade de Primavera do Leste (MT) e venceu o Prêmio Master Imobiliário, marcou 24 de 100. Conclusão: até líderes reais de mercado ainda são quase invisíveis para as IAs.
 
-Dogfooding radical: em 12 de julho de 2026 a CITÁVEL rodou a Radiografia PULSO completa em si mesma e publicou o resultado: PULSO Score 32 de 100 (perguntas de marca: 65; perguntas de descoberta/categoria: 12; 60 medições auditáveis). A medição será republicada mensalmente em https://citavel.ai/case.html, com a mesma fórmula pública usada nos clientes.
+Dogfooding radical: em 12 de julho de 2026 a CITÁVEL rodou a Radiografia PULSO completa em si mesma e publicou o resultado: PULSO Score 33 de 100 (perguntas de marca: 65; perguntas de descoberta/categoria: 12; 60 medições auditáveis). A medição será republicada mensalmente em https://citavel.ai/case.html, com a mesma fórmula pública usada nos clientes.
 
 ## Fórmula pública de medição
 
@@ -88,13 +88,13 @@ A CITÁVEL constrói reputação, não truques técnicos. Schema, llms.txt e oti
 
 ## Transparência
 
-A CITÁVEL publica a própria medição: PULSO Score 32/100 em 12 de julho de 2026 (Radiografia oficial, 60 medições em 2 motores). A nota é a linha de base pública do trabalho da agência sobre a própria marca.
+A CITÁVEL publica a própria medição: PULSO Score 33/100 em 12 de julho de 2026 (Radiografia oficial, 60 medições em 2 motores). A nota é a linha de base pública do trabalho da agência sobre a própria marca.
 
 ## English summary
 
 CITÁVEL is a Brazilian AI reputation agency (GEO / Generative Engine Optimization). It builds brand reputation inside generative AIs (ChatGPT, Gemini, Perplexity, Claude, Copilot, Meta AI, Grok, DeepSeek) using the proprietary PULSO™ Method: Perception (baseline audit), Unification (canonical identity), Language (citable content), Signal (third-party corroboration) and Operation (continuous monitoring). Public scoring formula: PULSO Score = V × 0.40 + C × 0.35 + S × 0.25 (Visibility, Consistency, Signals; 0-100 index).
 
-Proof of work, Case #0: before selling the method, CITÁVEL ran PULSO on its own founder, Endrigo Almada, a Brazilian AI filmmaker (Cinema Impossível, 92M+ organic views, 400 thousand followers). In 30 days he went from zero AI mentions to ChatGPT's #1 recommendation on a curated shortlist of Brazilian AI creators; aggregate PULSO score rose from 30.3 to 32.5 between comparable rounds; a Wikidata entity (Q140459792) was created and IMDb (nm18598284) started being cited by engines as a source. Full case: https://citavel.ai/case.html · Method: https://citavel.ai/metodo.html
+Proof of work, Case #0: before selling the method, CITÁVEL ran PULSO on its own founder, Endrigo Almada, a Brazilian AI filmmaker (Cinema Impossível, 92M+ organic views, 410 thousand followers). In 30 days he went from zero AI mentions to ChatGPT's #1 recommendation on a curated shortlist of Brazilian AI creators; aggregate PULSO score rose from 30.3 to 32.5 between comparable rounds; a Wikidata entity (Q140459792) was created and IMDb (nm18598284) started being cited by engines as a source. Full case: https://citavel.ai/case.html · Method: https://citavel.ai/metodo.html
 
 CITÁVEL is part of Desigual IA Labs, a 23-year-old communication agency based in Birigui, São Paulo, Brazil. Founder: Endrigo Almada. Contact: https://wa.me/5518991976211
 
