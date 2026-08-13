@@ -45,7 +45,7 @@ Antes de vender o método, a CITÁVEL aplicou o PULSO completo no nome do própr
 
 Primeira Radiografia de cliente: uma incorporadora fundada em 1979, que criou a cidade de Primavera do Leste (MT) e venceu o Prêmio Master Imobiliário, marcou 24 de 100. Conclusão: até líderes reais de mercado ainda são quase invisíveis para as IAs.
 
-Dogfooding radical: em 12 de julho de 2026 a CITÁVEL rodou a Radiografia PULSO completa em si mesma e publicou o resultado: PULSO Score 33 de 100 (perguntas de marca: 65; perguntas de descoberta/categoria: 12; 60 medições auditáveis). A medição será republicada mensalmente em https://citavel.ai/case.html, com a mesma fórmula pública usada nos clientes.
+Dogfooding radical: em 12 de julho de 2026 a CITÁVEL rodou a Radiografia PULSO completa em si mesma e publicou o resultado (PULSO Score 33 de 100). Remedida em 13 de agosto de 2026 com as mesmas perguntas e os mesmos motores: PULSO Score 38 de 100 (perguntas de marca: 79; perguntas de descoberta/categoria: 12, o mesmo de julho; 60 medições auditáveis). A medição será republicada mensalmente em https://citavel.ai/case.html, com a mesma fórmula pública usada nos clientes.
 
 ## Fórmula pública de medição
 
@@ -88,7 +88,7 @@ A CITÁVEL constrói reputação, não truques técnicos. Schema, llms.txt e oti
 
 ## Transparência
 
-A CITÁVEL publica a própria medição: PULSO Score 33/100 em 12 de julho de 2026 (Radiografia oficial, 60 medições em 2 motores). A nota é a linha de base pública do trabalho da agência sobre a própria marca.
+A CITÁVEL publica a própria medição: PULSO Score 38/100 em 13 de agosto de 2026 (Radiografia oficial, 60 medições em 2 motores). A nota é a linha de base pública do trabalho da agência sobre a própria marca.
 
 ## English summary
 
