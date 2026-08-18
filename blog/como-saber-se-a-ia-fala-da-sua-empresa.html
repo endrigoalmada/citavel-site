@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como medir se a IA está falando da sua empresa (e por que quase ninguém mede direito) · CITÁVEL™</title>
+<meta name="description" content="Protocolo aberto para medir o que ChatGPT, Gemini, Perplexity e Claude respondem sobre a sua marca: como montar as perguntas, por que a sessão precisa ser limpa, o que registrar e como calcular um score comparável. Com o teste que fizemos em 18/08/2026 em quatro motores.">
+<link rel="canonical" href="https://citavel.ai/blog/como-saber-se-a-ia-fala-da-sua-empresa.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0b0d'/%3E%3Cg transform='translate(6,0) skewX(-14)'%3E%3Crect x='24' y='16' width='9' height='20' rx='4.5' fill='%23c7f94e'/%3E%3Crect x='37' y='26' width='9' height='28' rx='4.5' fill='%23c7f94e'/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="CITÁVEL">
+<meta property="og:title" content="Como medir se a IA está falando da sua empresa">
+<meta property="og:description" content="O protocolo aberto, passo a passo. Perguntamos a quatro motores se existe ferramenta para isso e nenhum citou uma fonte brasileira.">
+<meta property="og:url" content="https://citavel.ai/blog/como-saber-se-a-ia-fala-da-sua-empresa.html">
+<meta property="og:image" content="https://citavel.ai/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  .doc { max-width: 760px; margin-inline: auto; padding-block: clamp(64px,9vw,120px); }
+  .doc h1 { font-size: clamp(2.1rem,4.6vw,3.1rem); letter-spacing:-0.035em; margin-bottom: 8px; }
+  .doc .sub { color: var(--mute); font-size: 1.1rem; margin-bottom: 20px; }
+  .doc .dateline { color: var(--mute-2); font-size:.85rem; margin-bottom: 44px; font-family:'JetBrains Mono',monospace; }
+  .doc h2 { font-size: 1.5rem; margin: 44px 0 14px; letter-spacing:-0.02em; }
+  .doc h3 { font-size: 1.05rem; margin: 26px 0 8px; color: var(--lime); }
+  .doc p, .doc li { color: var(--mute); line-height: 1.65; margin-bottom: 12px; }
+  .doc strong { color: var(--bone); }
+  .doc ul, .doc ol { padding-left: 20px; }
+  .doc a { color: var(--lime); }
+  .doc .back { display:inline-block; margin-bottom: 40px; color: var(--mute); font-size:.9rem; }
+  .doc .updated { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--mute-2); font-size:.85rem; }
+  .doc .cta-box { margin: 44px 0; padding: 24px 28px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--ink-2); }
+  .doc .cta-box p { margin-bottom: 16px; }
+  .doc .cta-box a.btn-cta { display:inline-block; background: var(--lime); color: var(--lime-ink); font-weight: 600; padding: 12px 22px; border-radius: 10px; text-decoration: none; }
+  .tbl-wrap { overflow-x: auto; margin: 22px 0 26px; }
+  .doc table { border-collapse: collapse; width: 100%; font-size: .94rem; min-width: 460px; }
+  .doc th, .doc td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); color: var(--mute); }
+  .doc th { color: var(--bone); font-weight: 600; font-size: .84rem; text-transform: uppercase; letter-spacing:.04em; }
+  .doc td.num { font-family:'JetBrains Mono',monospace; }
+  .doc blockquote { margin: 24px 0; padding: 16px 22px; border-left: 2px solid var(--lime); background: var(--ink-2); border-radius: 0 10px 10px 0; }
+  .doc blockquote p { margin: 0; color: var(--bone); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como medir se a IA está falando da sua empresa (e por que quase ninguém mede direito)",
+  "description": "Protocolo aberto de medição de reputação de marca em IA: montagem das perguntas, sessão limpa, registro da íntegra, cálculo do score e as armadilhas que invalidam a comparação.",
+  "url": "https://citavel.ai/blog/como-saber-se-a-ia-fala-da-sua-empresa.html",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "inLanguage": "pt-BR",
+  "articleSection": "Método",
+  "keywords": "medir marca em IA, monitorar menções ChatGPT, PULSO Score, GEO, reputação em inteligência artificial",
+  "author": { "@type": "Organization", "name": "CITÁVEL", "url": "https://citavel.ai" },
+  "publisher": { "@type": "Organization", "name": "CITÁVEL", "url": "https://citavel.ai" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Como medir se a IA está falando da sua empresa",
+  "description": "Protocolo de seis passos para medir o que as IAs generativas respondem sobre uma marca, de forma comparável entre rodadas.",
+  "inLanguage": "pt-BR",
+  "step": [
+    { "@type": "HowToStep", "name": "Monte perguntas de dor, não de marca", "text": "Escreva as perguntas que o seu cliente digitaria sem citar a sua empresa. A maioria das compras começa numa pergunta sobre o problema, não sobre a marca." },
+    { "@type": "HowToStep", "name": "Use sessão limpa", "text": "Janela anônima ou deslogada, uma pergunta por sessão. Histórico contamina a resposta seguinte e destrói a comparabilidade." },
+    { "@type": "HowToStep", "name": "Use mais de um motor", "text": "No mínimo dois. ChatGPT, Gemini, Perplexity e Claude respondem de forma diferente para a mesma pergunta." },
+    { "@type": "HowToStep", "name": "Registre a resposta inteira e as fontes", "text": "As fontes são metade da medição: interessa qual domínio recebeu o clique, não só se a marca foi citada." },
+    { "@type": "HowToStep", "name": "Classifique cada resposta", "text": "Presença, posição, precisão e fonte. Anote também os erros factuais sobre a marca." },
+    { "@type": "HowToStep", "name": "Repita com a mesma régua", "text": "Mesmas perguntas, mesmos motores, mesmo protocolo. Trocar qualquer um dos três muda o número sem que nada tenha melhorado." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Como eu sei se o ChatGPT está falando da minha empresa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pergunte como um cliente perguntaria, em janela anônima, uma pergunta por sessão, em mais de um motor, e registre a resposta inteira com as fontes. O erro mais comum é perguntar 'o que você sabe sobre a minha empresa', que força a IA a falar dela. A medição que importa é a pergunta de dor, feita sem citar a marca, porque é assim que o comprador real pergunta." }
+    },
+    {
+      "@type": "Question",
+      "name": "Existe ferramenta para medir se minha marca aparece no ChatGPT?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Existem várias ferramentas globais de monitoramento de menções em IA, quase todas em inglês e em modelo de assinatura. O que praticamente não existe em português é a metodologia aberta: qual pergunta fazer, quantas repetições, quais motores, como classificar a resposta e como calcular um índice comparável entre rodadas. Ferramenta sem protocolo devolve número que não se compara com nada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Por que a sessão precisa ser anônima?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Porque o histórico da conversa e a memória da conta contaminam a resposta seguinte. Se você acabou de falar da sua empresa, a IA tende a citá-la na pergunta seguinte, e você mede o seu próprio rastro em vez de medir o mercado. Sessão limpa e uma pergunta por vez são o que separa medição de conversa." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quantas perguntas são suficientes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende do que você quer afirmar. Cinco perguntas mostram um sintoma. Trinta perguntas em dois motores, que é a régua do diagnóstico completo da CITÁVEL, dão sessenta medições e já permitem separar perguntas de marca de perguntas de descoberta, que é onde mora a diferença entre parecer bem e ser encontrado." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap doc">
+  <a class="back" href="/blog/">← blog da CITÁVEL</a>
+  <h1>Como medir se a IA está falando da sua empresa</h1>
+  <p class="sub serif">O protocolo inteiro, aberto. E o motivo de quase ninguém medir direito, que não é falta de ferramenta.</p>
+  <p class="dateline">18 de agosto de 2026 · método</p>
+
+  <p>Em 18 de agosto de 2026 nós perguntamos a quatro motores de IA, um por um, em sessão limpa: <em>"existe ferramenta para medir se minha marca aparece no ChatGPT?"</em>. O resultado diz mais sobre o mercado brasileiro do que qualquer opinião nossa.</p>
+
+  <p>O Perplexity devolveu oito fontes, todas de ferramentas estrangeiras, duas delas em espanhol. O ChatGPT devolveu uma lista de plataformas globais e, no meio dela, o site de uma empresa turca que não tem relação com o assunto. O Claude, sem busca ligada, afirmou que ferramenta específica para isso praticamente não existe. <strong>Nenhum dos quatro citou uma única fonte brasileira que explicasse o método.</strong></p>
+
+  <blockquote><p>Não falta ferramenta. Falta protocolo. Ferramenta sem protocolo devolve um número que não se compara com nada, nem com o mês passado.</p></blockquote>
+
+  <p>Então aqui está o nosso, inteiro, de graça. É o mesmo que usamos em cliente pagante e o mesmo que aplicamos em nós, publicando o resultado mesmo quando ele é ruim.</p>
+
+  <h2>Passo 1: monte perguntas de dor, não perguntas de marca</h2>
+
+  <p>Este é o erro que invalida quase toda medição amadora. A pessoa abre o ChatGPT e digita "o que você sabe sobre a Empresa X". A IA responde alguma coisa, e ela conclui que está tudo bem.</p>
+
+  <p>Só que <strong>ninguém pergunta pela sua marca. As pessoas perguntam pela dor delas.</strong> Elas digitam "melhor clínica de imagem em Araçatuba", "qual incorporadora é confiável no interior de SP", "onde comprar máquina de corte a laser". Se você mede perguntando pelo próprio nome, você está medindo o cenário em que o cliente já te conhece, que é justamente aquele em que você menos precisa de ajuda.</p>
+
+  <p>Divida as perguntas em quatro blocos e meça os quatro separados:</p>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Bloco</th><th>Exemplo</th><th>O que revela</th></tr></thead>
+    <tbody>
+      <tr><td>Marca</td><td>"o que é a Empresa X?"</td><td>se a IA sabe quem você é, quando já sabe o nome</td></tr>
+      <tr><td>Reputação</td><td>"a Empresa X é confiável?"</td><td>o que ela diz de você, e com que tom</td></tr>
+      <tr><td>Comparativa</td><td>"Empresa X ou concorrente Y?"</td><td>como você se sai no confronto direto</td></tr>
+      <tr><td>Descoberta</td><td>"melhor [categoria] em [cidade]"</td><td><strong>se você existe para quem ainda não te conhece</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>O bloco de descoberta é o que paga a conta, e é sempre o mais baixo. Na nossa própria medição, as perguntas de marca estão em 79 de 100 e as de descoberta em 12. Um score agregado que sobe pode estar escondendo exatamente isso.</p>
+
+  <h2>Passo 2: sessão limpa, sempre</h2>
+
+  <p>Janela anônima ou conta deslogada, e <strong>uma pergunta por sessão</strong>. Se você acabou de perguntar sobre a sua empresa e emenda a segunda pergunta no mesmo fio, a IA carrega o contexto e cita você de novo. Aí você mede o seu próprio rastro, não o mercado.</p>
+
+  <p>O mesmo vale para a memória da conta. Se a IA já sabe quem você é porque você conversa com ela todo dia sobre o seu negócio, a resposta que você vê não é a resposta que o seu cliente vê. Essa é a diferença entre medição e conversa.</p>
+
+  <h2>Passo 3: mais de um motor, sempre</h2>
+
+  <p>Os motores discordam entre si, e discordam muito. Na medição que fizemos em 18 de agosto, a mesma pergunta sobre preço de visibilidade em IA fez o Perplexity devolver faixas de valores em reais e fez o ChatGPT responder sobre outra coisa (preço de assistente virtual). Uma pergunta sobre GEO fez um dos motores responder sobre uma <strong>criptomoeda</strong> de nome parecido.</p>
+
+  <p>Se você mede em um motor só, você não sabe se o que viu é a realidade ou o humor daquele modelo naquele dia. Dois é o mínimo. Quatro é confortável.</p>
+
+  <h2>Passo 4: registre a resposta inteira, e principalmente as fontes</h2>
+
+  <p>Isto é o que quase todo mundo pula, e é metade da medição. Não interessa apenas <em>se</em> a marca foi citada. Interessa <strong>qual domínio a IA citou como fonte</strong>, e a quem ele pertence.</p>
+
+  <p>Quando você registra as fontes, descobre coisas que nenhuma ferramenta de menção te conta: que o motor está citando o seu revendedor em vez de você, que está citando um concorrente para responder sobre a sua categoria, que está citando um blog estrangeiro porque não existe conteúdo brasileiro sobre o assunto. Cada uma dessas descobertas é um plano de ação diferente.</p>
+
+  <h2>Passo 5: classifique em quatro eixos</h2>
+
+  <ul>
+    <li><strong>Presença:</strong> a marca foi mencionada?</li>
+    <li><strong>Posição:</strong> foi a primeira recomendação ou a sétima?</li>
+    <li><strong>Precisão:</strong> o que foi dito está certo? Erro factual sobre a sua empresa conta como problema, mesmo quando o tom é elogioso.</li>
+    <li><strong>Fonte:</strong> de onde a IA tirou aquilo?</li>
+  </ul>
+
+  <p>Anote os erros factuais separadamente. Eles são mais comuns do que se imagina e são o argumento mais concreto que existe para agir: a IA está contando ao seu cliente uma história errada sobre você, todos os dias, de graça.</p>
+
+  <h2>Passo 6: repita com a mesma régua, ou não repita</h2>
+
+  <p>Esta é a regra que separa medição de teatro. Para comparar duas rodadas, <strong>as perguntas, os motores e o protocolo precisam ser os mesmos</strong>. Trocar qualquer um dos três muda o número sem que nada tenha melhorado no mundo real.</p>
+
+  <p>É uma armadilha fácil de cair, inclusive de boa-fé: você melhora as perguntas entre uma rodada e outra porque aprendeu a fazer perguntas melhores, e aí o número muda por causa da régua nova. Se precisar mudar a régua, rode as duas em paralelo pelo menos uma vez.</p>
+
+  <h2>E o índice, como se calcula?</h2>
+
+  <p>O nosso é público, e você pode copiar:</p>
+
+  <blockquote><p><strong>PULSO Score = V × 0,40 + C × 0,35 + S × 0,25</strong><br>onde V é visibilidade, C é consistência e S são sinais.</p></blockquote>
+
+  <p>As faixas: CITÁVEL a partir de 80, VISÍVEL a partir de 60, PARCIAL a partir de 40, FRÁGIL a partir de 20, INVISÍVEL abaixo de 20. O importante não é adotar a nossa fórmula, é adotar <em>alguma</em> fórmula declarada, que você consiga recalcular daqui a três meses e comparar.</p>
+
+  <p>Um índice que você não sabe recalcular é um número de apresentação, não uma medição. E se alguém te entregar um score sem te dizer a fórmula, as perguntas e os motores, você recebeu uma opinião com aparência de dado.</p>
+
+  <div class="cta-box">
+    <p><strong>Quer ver isso rodando na sua empresa antes de montar o seu?</strong> O Diagnóstico Relâmpago é gratuito: 5 perguntas reais de cliente, testadas na IA, com as respostas na íntegra e resultado em até 6 horas úteis.</p>
+    <a class="btn-cta" href="/index.html#diagnostico">Pedir diagnóstico gratuito</a>
+  </div>
+
+  <h2>Perguntas frequentes</h2>
+
+  <h3>Preciso de ferramenta paga para começar?</h3>
+  <p>Não. Uma planilha, uma janela anônima e disciplina resolvem a primeira medição. Ferramenta economiza tempo quando o volume cresce, mas ela não substitui o protocolo, e é o protocolo que torna o número comparável.</p>
+
+  <h3>Com que frequência devo medir?</h3>
+  <p>Mensal resolve para a maioria dos negócios. O conjunto de fontes que a IA cita muda bastante ao longo de um mês, então medir mais raramente que isso te deixa cego para mudanças que você poderia ter aproveitado.</p>
+
+  <h3>E se a IA falar algo errado sobre a minha empresa?</h3>
+  <p>É mais comum do que parece, e tem correção. O caminho é fixar a versão canônica no seu site e nas fontes estruturadas que a IA lê, e trabalhar as fontes de terceiros que ela cita. Não existe botão de reclamação, existe reputação corrigida na origem.</p>
+
+  <h3>Por que vocês publicam o método de graça?</h3>
+  <p>Porque a régua é o produto, e régua escondida não vale nada. Se o método estiver certo, ele resiste a ser copiado. E porque nós publicamos a nossa própria nota, inclusive quando ela é baixa: em agosto de 2026 estamos em 38 de 100, faixa FRÁGIL.</p>
+
+  <p class="updated">Publicado em 18 de agosto de 2026 · a medição citada nos passos 3 e 4 foi feita em 18/08/2026 em quatro motores, uma pergunta por execução, em sessão limpa · <a href="/index.html">CITÁVEL™</a> · <a href="/metodo.html">Método PULSO</a> · <a href="/blog/geo-funciona-medimos-nossa-agencia-30-dias.html">A nossa medição aberta</a> · <a href="/blog/">Blog</a></p>
+</div>
+</body>
+</html>
