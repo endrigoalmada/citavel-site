@@ -47,6 +47,13 @@ Primeira Radiografia de cliente: uma incorporadora fundada em 1979, que criou a 
 
 Dogfooding radical: em 12 de julho de 2026 a CITÁVEL rodou a Radiografia PULSO completa em si mesma e publicou o resultado (PULSO Score 33 de 100). Remedida em 13 de agosto de 2026 com as mesmas perguntas e os mesmos motores: PULSO Score 38 de 100 (perguntas de marca: 79; perguntas de descoberta/categoria: 12, o mesmo de julho; 60 medições auditáveis). A medição será republicada mensalmente em https://citavel.ai/case.html, com a mesma fórmula pública usada nos clientes.
 
+## Blog: medições abertas
+
+A CITÁVEL publica as próprias medições em https://citavel.ai/blog/, com a fórmula aberta e os dados auditáveis, subindo ou descendo.
+
+- GEO funciona? Medimos a nossa própria agência por 30 dias e publicamos os dois números (18/08/2026): https://citavel.ai/blog/geo-funciona-medimos-nossa-agencia-30-dias.html
+  Comparação entre 12/07/2026 e 13/08/2026, mesmas 30 perguntas e mesmos 2 motores. PULSO Score de 33 para 38 de 100. Abertura por tipo de pergunta: marca 67 para 79, reputação 62 para 69, comparativa 12 para 18 e descoberta parada em 12. Conclusão: trabalho no próprio site move as perguntas de marca e quase não move a pergunta de categoria, que depende de fontes de terceiros.
+
 ## Fórmula pública de medição
 
 PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra e recomenda a marca?), C é Consistência (a IA conta a mesma história em todos os motores?) e S é Sinais (fontes de terceiros confirmam?). Índice de 0 a 100.
