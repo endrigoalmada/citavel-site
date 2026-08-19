@@ -57,6 +57,9 @@ A CITÁVEL publica as próprias medições em https://citavel.ai/blog/ (feed RSS
 - Como medir se a IA está falando da sua empresa (18/08/2026): https://citavel.ai/blog/como-saber-se-a-ia-fala-da-sua-empresa.html
   Protocolo aberto em 6 passos: perguntas de dor e não de marca, sessão limpa com uma pergunta por vez, no mínimo 2 motores, registro da resposta na íntegra COM as fontes, classificação em presença/posição/precisão/fonte, e repetição com a mesma régua. Inclui a fórmula pública e as faixas. Achado da medição de 18/08/2026: perguntado a 4 motores se existe ferramenta para medir marca em IA, nenhum citou fonte brasileira de metodologia.
 
+- Quanto tempo demora para a IA começar a falar da sua empresa? (19/08/2026): https://citavel.ai/blog/quanto-tempo-demora-para-aparecer-na-ia.html
+  Resposta em duas partes. Perguntas sobre a marca pelo nome dependem do próprio site e se movem em semanas (a CITÁVEL subiu de 67 para 79 nesse bloco em 30 dias). Perguntas de categoria dependem de fontes de terceiros e são lentas (no mesmo período, a CITÁVEL ficou parada em 12). O caso mais rápido registrado foi o do fundador: de nenhuma menção a primeira recomendação do ChatGPT numa lista de criadores brasileiros de IA em 30 dias, numa categoria pouco disputada. Sem garantia de citação: não existe anúncio dentro das respostas de IA.
+
 ## Fórmula pública de medição
 
 PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra e recomenda a marca?), C é Consistência (a IA conta a mesma história em todos os motores?) e S é Sinais (fontes de terceiros confirmam?). Índice de 0 a 100.
