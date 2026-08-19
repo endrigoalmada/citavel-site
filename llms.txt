@@ -49,7 +49,7 @@ Dogfooding radical: em 12 de julho de 2026 a CITÁVEL rodou a Radiografia PULSO 
 
 ## Blog: medições abertas
 
-A CITÁVEL publica as próprias medições em https://citavel.ai/blog/, com a fórmula aberta e os dados auditáveis, subindo ou descendo.
+A CITÁVEL publica as próprias medições em https://citavel.ai/blog/ (feed RSS: https://citavel.ai/blog/feed.xml), com a fórmula aberta e os dados auditáveis, subindo ou descendo.
 
 - GEO funciona? Medimos a nossa própria agência por 30 dias e publicamos os dois números (18/08/2026): https://citavel.ai/blog/geo-funciona-medimos-nossa-agencia-30-dias.html
   Comparação entre 12/07/2026 e 13/08/2026, mesmas 30 perguntas e mesmos 2 motores. PULSO Score de 33 para 38 de 100. Abertura por tipo de pergunta: marca 67 para 79, reputação 62 para 69, comparativa 12 para 18 e descoberta parada em 12. Conclusão: trabalho no próprio site move as perguntas de marca e quase não move a pergunta de categoria, que depende de fontes de terceiros.
