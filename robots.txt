@@ -1,66 +1,105 @@
 # CITÁVEL · robots.txt
 # Reputação em IA exige que os crawlers das IAs possam ler o site. Todos liberados.
 
-# /propostas/ carrega diagnóstico de cliente (material confidencial), fora de todo
-# crawler. Cada agente tem bloco próprio, então o Disallow precisa se repetir:
+# /propostas/, /diagnosticos/ e /radiografia/ carregam material de CLIENTE
+# (diagnósticos, laudos e propostas nominais), fora de todo crawler. As três têm
+# o mesmo grau de confidencialidade e por isso a mesma regra: até 25/08/2026 só
+# /propostas/ estava bloqueada, e as outras duas contavam apenas com a meta noindex.
+# noindex impede INDEXAÇÃO, não impede LEITURA: um crawler de IA respeita o robots
+# antes de baixar a página, e é essa a proteção que interessa aqui.
+# Cada agente tem bloco próprio, então o Disallow precisa se repetir:
 # em robots.txt o grupo mais específico vence e NÃO herda regra do User-agent: *.
 
 # Buscadores tradicionais
 User-agent: Googlebot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: Bingbot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 
 # Crawlers de IA generativa (citação e busca)
 User-agent: GPTBot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: PerplexityBot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: Perplexity-User
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: ClaudeBot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: anthropic-ai
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: Claude-SearchBot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: Google-Extended
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: Applebot-Extended
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: meta-externalagent
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: Bytespider
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 
 # Redes sociais
 User-agent: Twitterbot
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 User-agent: facebookexternalhit
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 
 User-agent: *
 Allow: /
 Disallow: /propostas/
+Disallow: /diagnosticos/
+Disallow: /radiografia/
 
 Sitemap: https://citavel.ai/sitemap.xml
