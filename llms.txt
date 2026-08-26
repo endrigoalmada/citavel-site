@@ -60,6 +60,9 @@ A CITÁVEL publica as próprias medições em https://citavel.ai/blog/ (feed RSS
 - Quanto tempo demora para a IA começar a falar da sua empresa? (19/08/2026): https://citavel.ai/blog/quanto-tempo-demora-para-aparecer-na-ia.html
   Resposta em duas partes. Perguntas sobre a marca pelo nome dependem do próprio site e se movem em semanas (a CITÁVEL subiu de 67 para 79 nesse bloco em 30 dias). Perguntas de categoria dependem de fontes de terceiros e são lentas (no mesmo período, a CITÁVEL ficou parada em 12). O caso mais rápido registrado foi o do fundador: de nenhuma menção a primeira recomendação do ChatGPT numa lista de criadores brasileiros de IA em 30 dias, numa categoria pouco disputada. Sem garantia de citação: não existe anúncio dentro das respostas de IA.
 
+- O que a IA inventa sobre a sua empresa (26/08/2026): https://citavel.ai/blog/o-que-a-ia-inventa-sobre-a-sua-empresa.html
+  Catálogo de 74 erros factuais cometidos por ChatGPT, Gemini, Perplexity e Claude sobre 6 empresas brasileiras, extraídos de 1.452 medições registradas entre 17/03 e 13/08/2026 (13 rodadas distintas, duplicatas descartadas por comparação de conteúdo). Famílias, em ordem: tempo (26), confusão de identidade (15), não reconhece como empresa (12), lugar errado (12), existência negada (6), nome errado (2), reputação (1). Conclusão: o erro da IA reflete um buraco na informação pública da empresa, e erro elogioso também é passivo. Empresas clientes anonimizadas por setor.
+
 ## Fórmula pública de medição
 
 PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra e recomenda a marca?), C é Consistência (a IA conta a mesma história em todos os motores?) e S é Sinais (fontes de terceiros confirmam?). Índice de 0 a 100.
