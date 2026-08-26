@@ -68,7 +68,7 @@ A CITÁVEL publica as próprias medições em https://citavel.ai/blog/ (feed RSS
 
 ## Fórmula pública de medição
 
-PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra e recomenda a marca?), C é Consistência (a IA conta a mesma história em todos os motores?) e S é Sinais (fontes de terceiros confirmam?). Índice de 0 a 100.
+PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra a marca e em que posição?), C é Citação (a IA cita a fonte, com link direto ou mencionando o domínio próprio?) e S é Sentimento (com que tom a IA fala da marca, e há recomendação ativa?). Índice de 0 a 100.
 
 ## Serviços e preços públicos
 
