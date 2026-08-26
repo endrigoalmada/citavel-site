@@ -66,6 +66,9 @@ A CITÁVEL publica as próprias medições em https://citavel.ai/blog/ (feed RSS
 - Quem a IA diz que é o seu concorrente (26/08/2026): https://citavel.ai/blog/quem-a-ia-diz-que-e-seu-concorrente.html
   Comparação entre os concorrentes que 6 empresas declararam e os que as IAs citaram: 6 declarados contra 282 citados (máquinas industriais), 2 contra 234 (agência), 15 contra 98 (acessórios de churrasco), 4 contra 50 (clínica), 0 contra 2 (incorporadora). Padrão: categoria estreita gera lista curta e precisa; categoria ampla gera lista longa e imprecisa. Uma marca premium sob medida foi colocada para competir com Tramontina, Weber e Mondial. Você não escolhe seus concorrentes na IA: ela agrupa por semelhança de texto, não de negócio.
 
+- A IA responde diferente em cada língua (26/08/2026): https://citavel.ai/blog/a-ia-responde-diferente-em-cada-lingua.html
+  A mesma pergunta feita em português, inglês e chinês nos mesmos 4 motores devolve ecossistemas de fonte completamente distintos: em pt-BR, blogs de agências brasileiras; em inglês, software e blogs dos EUA e da Índia; em chinês, documentação traduzida e plataformas chinesas. NENHUMA fonte brasileira apareceu em inglês ou chinês. A resposta em chinês encolheu para cerca de um quarto do tamanho da versão em português e trouxe erro factual. Em inglês, "best GEO agency in Brazil" devolveu empresas de geotécnica, por ambiguidade da sigla. A CITÁVEL só existe em português e só em um dos motores. Importa para quem exporta, representa marca estrangeira, atende turista ou busca investimento externo.
+
 ## Fórmula pública de medição
 
 PULSO Score = V × 0,40 + C × 0,35 + S × 0,25, onde V é Visibilidade (a IA encontra a marca e em que posição?), C é Citação (a IA cita a fonte, com link direto ou mencionando o domínio próprio?) e S é Sentimento (com que tom a IA fala da marca, e há recomendação ativa?). Índice de 0 a 100.
