@@ -1,8 +1,8 @@
 # CITÁVEL · robots.txt
 # Reputação em IA exige que os crawlers das IAs possam ler o site. Todos liberados.
 
-# /propostas/, /diagnosticos/ e /radiografia/ carregam material de CLIENTE
-# (diagnósticos, laudos e propostas nominais), fora de todo crawler. As três têm
+# /propostas/, /diagnosticos/, /radiografia/ e /relatorios/ carregam material de CLIENTE
+# (diagnósticos, laudos e propostas nominais), fora de todo crawler. As quatro têm
 # o mesmo grau de confidencialidade e por isso a mesma regra: até 25/08/2026 só
 # /propostas/ estava bloqueada, e as outras duas contavam apenas com a meta noindex.
 # noindex impede INDEXAÇÃO, não impede LEITURA: um crawler de IA respeita o robots
@@ -19,12 +19,14 @@ Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Bingbot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 
 # Crawlers de IA generativa (citação e busca)
 User-agent: GPTBot
@@ -33,72 +35,84 @@ Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: ChatGPT-User
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: OAI-SearchBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: PerplexityBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Perplexity-User
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: ClaudeBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: anthropic-ai
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Claude-SearchBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Google-Extended
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Applebot-Extended
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: meta-externalagent
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Bytespider
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 
 # Entraram em 09/10/2026: assistentes que respondem com fonte (Amazon, DuckDuckGo,
 # Mistral, Cohere, You.com), o Applebot da Siri e o Common Crawl, base de treino
@@ -109,54 +123,63 @@ Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: GoogleOther
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Applebot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: Amazonbot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: DuckAssistBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: MistralAI-User
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: cohere-ai
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: YouBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: CCBot
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 
 # Redes sociais
 User-agent: Twitterbot
@@ -165,12 +188,14 @@ Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 User-agent: facebookexternalhit
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 
 User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
@@ -178,5 +203,6 @@ Allow: /
 Disallow: /propostas/
 Disallow: /diagnosticos/
 Disallow: /radiografia/
+Disallow: /relatorios/
 
 Sitemap: https://citavel.ai/sitemap.xml

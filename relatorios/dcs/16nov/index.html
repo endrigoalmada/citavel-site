@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>DCS · Remedição competitiva em IA · 16/11/2026 · CITÁVEL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0A0E;--ink-deep:#050508;--plum-dark:#1A0F2E;--plum-mid:#241440;
+  --roxo:#8B5CF6;--roxo-deep:#6D28D9;--roxo-muted:#A78BFA;--magenta:#C026D3;
+  --lima:#B8D62E;--lima-dim:#96AF22;--warm-white:#F0EDE6;--cream:#FAF8F4;
+  --zinc-400:#A1A1AA;--zinc-500:#71717A;
+  --glass:rgba(36,20,64,.42);--glass-border:rgba(255,255,255,.08);
+  --title-size:clamp(2rem,5.2vw,4.6rem);--h2-size:clamp(1.4rem,3.4vw,2.6rem);
+  --h3-size:clamp(1rem,2.2vw,1.5rem);--body-size:clamp(.78rem,1.35vw,1.05rem);
+  --small-size:clamp(.62rem,.95vw,.82rem);--mono-size:clamp(.55rem,.85vw,.75rem);
+  --slide-padding:clamp(1.2rem,4.5vw,4.5rem);--content-gap:clamp(.6rem,2vw,1.8rem);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow-x:hidden}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{font-family:'General Sans','Space Grotesk',system-ui,sans-serif;background:var(--ink);
+  color:var(--warm-white);font-size:var(--body-size);line-height:1.6}
+::selection{background:var(--lima);color:var(--ink)}
+.slide{width:100vw;height:100vh;height:100dvh;overflow:hidden;scroll-snap-align:start;
+  display:flex;flex-direction:column;position:relative;
+  background:radial-gradient(120% 90% at 85% -10%,rgba(109,40,217,.28) 0%,transparent 55%),
+             radial-gradient(90% 70% at -5% 105%,rgba(139,92,246,.16) 0%,transparent 50%),
+             linear-gradient(160deg,var(--ink-deep) 0%,var(--ink) 45%,var(--plum-dark) 100%)}
+.slide-content{flex:1;display:flex;flex-direction:column;justify-content:center;max-height:100%;
+  overflow:hidden;padding:var(--slide-padding);max-width:1440px;margin:0 auto;width:100%;position:relative;z-index:2}
+.bg-tex{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bg-tex img{width:100%;height:100%;object-fit:cover;display:block}
+.bg-tex.dim::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(5,5,8,.94) 0%,rgba(5,5,8,.8) 45%,rgba(10,10,14,.45) 100%)}
+.bg-side{position:absolute;top:0;right:0;bottom:0;width:36%;overflow:hidden;z-index:0}
+.bg-side img{width:100%;height:100%;object-fit:cover;display:block}
+.bg-side::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--ink) 0%,rgba(10,10,14,.25) 40%,rgba(10,10,14,.05) 100%)}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+h1{font-size:var(--title-size);font-weight:300;line-height:.97;letter-spacing:-.04em}
+h2{font-size:var(--h2-size);font-weight:300;line-height:1.04;letter-spacing:-.03em}
+h3{font-size:var(--h3-size);font-weight:400;line-height:1.15}
+.mono{font-family:'Space Mono',monospace;font-size:var(--mono-size);text-transform:uppercase;letter-spacing:.09em}
+.kicker{font-family:'Space Mono',monospace;font-size:var(--mono-size);text-transform:uppercase;letter-spacing:.1em;
+  color:var(--roxo-muted);transform:rotate(-2deg);transform-origin:left bottom;display:inline-block;
+  margin-bottom:clamp(.6rem,1.6vh,1.2rem)}
+.hl{color:var(--lima)}.hl-roxo{color:var(--roxo-muted)}.muted{color:var(--zinc-400)}
+.small{font-size:var(--small-size)}strong{font-weight:500;color:var(--cream)}
+.mag{color:var(--magenta)}
+.glass{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);padding:clamp(.7rem,1.8vw,1.6rem)}
+.gold-rule{height:1px;background:linear-gradient(90deg,var(--lima-dim),transparent);border:none;margin:clamp(.5rem,1.4vh,1rem) 0}
+.grid{display:grid;gap:clamp(.5rem,1.4vw,1.1rem)}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.num{font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:-.03em;
+  font-size:clamp(1.6rem,3.6vw,3rem);line-height:1;color:var(--lima)}
+.tag{display:inline-block;font-family:'Space Mono',monospace;font-size:var(--mono-size);text-transform:uppercase;
+  letter-spacing:.08em;padding:.3em .8em;border:1px solid var(--glass-border);color:var(--zinc-400);white-space:nowrap}
+.tag.on{border-color:var(--lima-dim);color:var(--lima)}
+.tag.bad{border-color:rgba(192,38,211,.5);color:var(--magenta)}
+.glitch-bar{position:absolute;left:-2%;right:-2%;bottom:clamp(1rem,4vh,2.6rem);transform:rotate(.3deg);
+  background:var(--lima);color:var(--ink);font-family:'Space Mono',monospace;font-weight:700;font-size:var(--mono-size);
+  text-transform:uppercase;letter-spacing:.1em;padding:.55em 3em;white-space:nowrap;overflow:hidden;z-index:3}
+.rfp-ref{position:absolute;right:var(--slide-padding);top:clamp(1rem,3.5vh,2.2rem);font-family:'Space Mono',monospace;
+  font-size:var(--mono-size);color:var(--zinc-500);text-transform:uppercase;letter-spacing:.1em;z-index:4}
+.logo-word{font-family:'Space Grotesk',sans-serif;font-weight:500;letter-spacing:.02em;color:var(--cream)}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:clamp(.35rem,1vh,.7rem) clamp(.4rem,1vw,.9rem);border-bottom:1px solid var(--glass-border);vertical-align:middle}
+th{font-family:'Space Mono',monospace;font-size:var(--mono-size);text-transform:uppercase;letter-spacing:.08em;color:var(--roxo-muted);font-weight:400}
+td{font-size:var(--small-size);line-height:1.45}
+td.n{font-family:'Space Grotesk',sans-serif;font-size:clamp(.8rem,1.3vw,1.05rem);white-space:nowrap}
+tr.dcs td{color:var(--cream)}tr.dcs td:first-child{color:var(--lima)}
+.up{color:var(--lima)}.down{color:var(--magenta)}.eq{color:var(--zinc-400)}
+.bar{height:8px;background:rgba(255,255,255,.06);position:relative;margin-top:.45em}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--roxo)}
+.bar.cl i{background:var(--lima)}
+.nav-dots{position:fixed;right:clamp(.6rem,1.4vw,1.4rem);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.55rem;z-index:50}
+.nav-dots button{width:6px;height:6px;border:none;background:var(--zinc-500);cursor:pointer;transition:all .3s;padding:0}
+.nav-dots button.active{background:var(--lima);height:18px}
+.slide-counter{position:fixed;left:var(--slide-padding);bottom:clamp(.8rem,2.5vh,1.6rem);font-family:'Space Mono',monospace;
+  font-size:var(--mono-size);color:var(--zinc-500);letter-spacing:.1em;z-index:50}
+.progress{position:fixed;top:0;left:0;height:2px;background:var(--lima);width:0%;z-index:60;transition:width .4s}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.slide.in .rv{opacity:1;transform:none}
+.slide.in .d1{transition-delay:.05s}.slide.in .d2{transition-delay:.16s}.slide.in .d3{transition-delay:.27s}
+.slide.in .d4{transition-delay:.38s}.slide.in .d5{transition-delay:.49s}.slide.in .d6{transition-delay:.6s}
+.slide.in .bar i{transition:width 1.1s cubic-bezier(.16,1,.3,1) .35s}
+.slide:not(.in) .bar i{width:0!important}
+.slide.in .bg-tex{animation:kb 22s ease-out forwards}
+@keyframes kb{from{transform:scale(1.06)}to{transform:scale(1)}}
+@media screen and (max-height:620px){.rfp-ref{display:none}}
+@media screen and (max-width:820px){
+  html{scroll-snap-type:none}
+  .slide{height:auto;min-height:100dvh;overflow:visible}
+  .slide-content{overflow:visible;padding:4.5rem 16px 5rem}
+  .g2,.g3,.g4{grid-template-columns:1fr}.bg-side{display:none}
+  .wide{max-width:100%!important}
+  table{font-size:.8rem}th,td{padding:.4rem .3rem}
+  .glitch-bar{position:relative;bottom:auto;margin:1rem 0 2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important}
+  html{scroll-behavior:auto}.rv{opacity:1;transform:none}
+}
+@media print{
+  @page{size:508mm 285.75mm;margin:0}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{height:auto!important;overflow:visible!important}html{scroll-snap-type:none}
+  .nav-dots,.slide-counter,.progress{display:none!important}
+  .slide{page-break-after:always;break-after:page;width:508mm!important;height:285.75mm!important}
+  .rv{opacity:1!important;transform:none!important}.bg-tex{animation:none!important}
+  .glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(36,20,64,.72)}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<!-- 01 CAPA -->
+<section class="slide" id="s1">
+  <div class="bg-tex dim"><img src="img/capa.webp" alt=""></div>
+  <div class="slide-content">
+    <p class="mono rv d1" style="color:var(--zinc-400)">Birigui, 16 de novembro de 2026 · confidencial</p>
+    <div style="height:clamp(1rem,4vh,2.5rem)"></div>
+    <p class="kicker rv d2">// remedição competitiva em inteligência artificial</p>
+    <h1 class="rv d3">Um mês depois:<br>a <span class="hl">DCS</span> segue<br>na frente.</h1>
+    <div style="height:clamp(1rem,3.5vh,2rem)"></div>
+    <p class="rv d4 muted" style="max-width:52ch">DCS Diagnósticos por Imagem · Birigui e Araçatuba. As mesmas perguntas de 15/10, feitas de novo ao ChatGPT, Claude, Gemini e Perplexity.</p>
+  </div>
+  <div class="glitch-bar rv d5">citável · reputação de marcas em inteligência artificial · grupo desigual</div>
+</section>
+
+<!-- 02 COMO MEDIMOS -->
+<section class="slide" id="s2">
+  <span class="rfp-ref">// método</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// como medimos</p>
+    <h2 class="rv d2">Mesma régua de outubro,<br>pergunta por pergunta, <span class="hl">letra por letra</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g4">
+      <div class="glass rv d3"><p class="num">70</p><p class="mono muted" style="margin-top:.5em">perguntas idênticas às de 15/10</p></div>
+      <div class="glass rv d3"><p class="num">4</p><p class="mono muted" style="margin-top:.5em">IAs, nas mesmas versões de outubro</p></div>
+      <div class="glass rv d4"><p class="num">200</p><p class="mono muted" style="margin-top:.5em">respostas válidas de 200</p></div>
+      <div class="glass rv d4"><p class="num">112</p><p class="mono muted" style="margin-top:.5em">pares comparáveis no placar principal</p></div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g2">
+      <p class="rv d5 small"><strong>O placar principal</strong> usa só perguntas de quem está procurando onde fazer exame, sem citar nenhuma clínica pelo nome. É assim que um paciente novo pergunta: pela necessidade, não pela marca.</p>
+      <p class="rv d6 small"><strong>Recomendação</strong> só conta quando a IA indica a clínica de forma explícita. Aparecer numa lista é <strong>menção</strong>. Só comparamos a mesma pergunta, na mesma IA, nas duas datas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 PLACAR GERAL -->
+<section class="slide" id="s3">
+  <span class="rfp-ref">// placar · duas praças</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// quem as IAs recomendam</p>
+    <h2 class="rv d2">A DCS continua sendo<br>a clínica <span class="hl">mais recomendada</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="rv d3 wide" style="max-width:900px">
+      <table>
+        <tr><th>Clínica</th><th>Recomendada 15/10</th><th>Recomendada 16/11</th><th></th></tr>
+        <tr class="dcs"><td>DCS</td><td class="n">39 de 112</td><td class="n">37 de 112 · 33%</td><td style="width:30%"><div class="bar cl"><i style="width:33%"></i></div></td></tr>
+        <tr><td>CAMF</td><td class="n">26</td><td class="n">27 · 24%</td><td><div class="bar"><i style="width:24%"></i></div></td></tr>
+        <tr><td>Tomoson</td><td class="n">20</td><td class="n">21 · 19%</td><td><div class="bar"><i style="width:19%"></i></div></td></tr>
+        <tr><td>CDI Araçatuba</td><td class="n">12</td><td class="n">16 · 14%</td><td><div class="bar"><i style="width:14%"></i></div></td></tr>
+        <tr><td>IMNB</td><td class="n">5</td><td class="n">6 · 5%</td><td><div class="bar"><i style="width:5%"></i></div></td></tr>
+      </table>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d4 small"><strong>A DCS aparece em 83 das 112 respostas (74%)</strong> <span class="muted">e é recomendada em 37. Em outubro eram 89 e 39. Diferenças de duas ou três respostas ficam dentro da oscilação normal das IAs: o quadro geral é de estabilidade, com a liderança mantida.</span></p>
+  </div>
+</section>
+
+<!-- 04 ARAÇATUBA -->
+<section class="slide" id="s4">
+  <span class="rfp-ref">// praça · araçatuba</span>
+  <div class="bg-side"><img src="img/lado1.webp" alt=""></div>
+  <div class="slide-content">
+    <div class="wide" style="max-width:62%">
+      <p class="kicker rv d1">// araçatuba</p>
+      <h2 class="rv d2">A DCS <span class="hl">encostou</span> na CAMF.<br>E a disputa esquentou.</h2>
+      <div style="height:var(--content-gap)"></div>
+      <div class="rv d3">
+        <table>
+          <tr><th>Recomendada em 56 respostas</th><th>15/10</th><th>16/11</th></tr>
+          <tr><td>CAMF</td><td class="n">26</td><td class="n">27</td></tr>
+          <tr class="dcs"><td>DCS</td><td class="n">20</td><td class="n">23 <span class="up">▲</span></td></tr>
+          <tr><td>Tomoson</td><td class="n">13</td><td class="n">18 <span class="mag">▲</span></td></tr>
+          <tr><td>CDI Araçatuba</td><td class="n">12</td><td class="n">16 <span class="mag">▲</span></td></tr>
+        </table>
+      </div>
+      <div style="height:var(--content-gap)"></div>
+      <p class="rv d4 small"><strong>A distância para a líder caiu de 6 para 4 respostas.</strong> <span class="muted">Mas Tomoson e CDI cresceram mais rápido que a DCS. Na pergunta sobre ressonância de campo aberto, a DCS foi recomendada por ChatGPT, Gemini e Perplexity.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 BIRIGUI -->
+<section class="slide" id="s5">
+  <span class="rfp-ref">// praça · birigui</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// birigui</p>
+    <h2 class="rv d2">Em casa, a DCS segue em quase<br>toda resposta, mas foi <span class="mag">menos indicada</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g3">
+      <div class="glass rv d3"><p class="mono hl-roxo">Menção da DCS</p><hr class="gold-rule"><p class="num">48<span style="font-size:.45em;color:var(--zinc-400)"> de 56</span></p><p class="small muted" style="margin-top:.4em">eram 53 em outubro. Ainda presente em 86% das respostas.</p></div>
+      <div class="glass rv d4"><p class="mono hl-roxo">Recomendação da DCS</p><hr class="gold-rule"><p class="num" style="color:var(--magenta)">14<span style="font-size:.45em;color:var(--zinc-400)"> de 56</span></p><p class="small muted" style="margin-top:.4em">eram 19. É a queda mais relevante desta medição.</p></div>
+      <div class="glass rv d5"><p class="mono hl-roxo">Concorrência local</p><hr class="gold-rule"><p class="small" style="margin-top:.2em">IMNB recomendado em <strong>6</strong> (eram 5). Tomoson em <strong>3</strong> (eram 7). Nenhum concorrente chega perto da DCS em Birigui.</p></div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d6 small muted">As IAs continuam falando da DCS em Birigui. O que diminuiu foi a indicação explícita ("recomendo a DCS"), e ela caiu principalmente no Claude.</p>
+  </div>
+</section>
+
+<!-- 06 POR IA -->
+<section class="slide" id="s6">
+  <span class="rfp-ref">// por inteligência artificial</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// cada ia tem sua leitura</p>
+    <h2 class="rv d2">Três IAs melhoraram ou mantiveram.<br>Uma <span class="mag">puxou para baixo</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="rv d3 wide" style="max-width:900px">
+      <table>
+        <tr><th>IA</th><th>DCS recomendada (de 28)</th><th>DCS mencionada (de 28)</th><th>Leitura</th></tr>
+        <tr><td>ChatGPT</td><td class="n">4 → 6</td><td class="n">19 → 22</td><td><span class="tag on">melhorou</span></td></tr>
+        <tr><td>Perplexity</td><td class="n">10 → 13</td><td class="n">23 → 21</td><td><span class="tag on">melhorou</span></td></tr>
+        <tr><td>Gemini</td><td class="n">13 → 13</td><td class="n">25 → 27</td><td><span class="tag">estável</span></td></tr>
+        <tr><td>Claude</td><td class="n">12 → 5</td><td class="n">22 → 13</td><td><span class="tag bad">caiu</span></td></tr>
+      </table>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d4 small"><strong>O ChatGPT, ponto mais fraco em outubro, avançou.</strong> <span class="muted">No Claude, a CAMF passou a ser a mais recomendada (de 7 para 11), e a DCS saiu de 12 para 5.</span></p>
+  </div>
+</section>
+
+<!-- 07 O ALERTA -->
+<section class="slide" id="s7">
+  <span class="rfp-ref">// o que explica a queda</span>
+  <div class="bg-side"><img src="img/lado2.webp" alt=""></div>
+  <div class="slide-content">
+    <div class="wide" style="max-width:62%">
+      <p class="kicker rv d1">// o sinal por trás do número</p>
+      <h2 class="rv d2">Duas IAs passaram a usar<br><span class="hl">menos o site da DCS</span><br>como fonte.</h2>
+      <div style="height:var(--content-gap)"></div>
+      <div class="rv d3">
+        <table>
+          <tr><th>Respostas que citam dcs.med.br como fonte (de 30)</th><th>15/10</th><th>16/11</th></tr>
+          <tr><td>Gemini</td><td class="n">26</td><td class="n">30 <span class="up">▲</span></td></tr>
+          <tr><td>Perplexity</td><td class="n">22</td><td class="n">12 <span class="down">▼</span></td></tr>
+          <tr><td>Claude</td><td class="n">23</td><td class="n">11 <span class="down">▼</span></td></tr>
+        </table>
+      </div>
+      <div style="height:var(--content-gap)"></div>
+      <p class="rv d4 small"><strong>No Claude, a queda é quase toda em Araçatuba:</strong> <span class="muted">o site da DCS foi fonte em 9 de 14 respostas em outubro e em 1 de 14 agora, e a recomendação foi de 5 para 1. Uma das respostas chegou a dizer que outra clínica tem "a única ressonância de campo aberto da região". O Perplexity é um caso diferente: trocou o site por diretórios, mas passou a recomendar mais a DCS.</span></p>
+      <p class="rv d5 small muted" style="margin-top:.5em">O site está no ar e liberado para as IAs (conferido em 16/11). Quando a IA não lê a DCS, ela não recomenda a DCS.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 COMO LER -->
+<section class="slide" id="s8">
+  <span class="rfp-ref">// leitura honesta</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// como ler estes números</p>
+    <h2 class="rv d2">O que dá para afirmar,<br>e o que <span class="hl">ainda não</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g2">
+      <div class="glass rv d3">
+        <p class="mono hl">Dá para afirmar</p><hr class="gold-rule">
+        <p class="small">A DCS mantém a liderança somando as duas praças.</p>
+        <p class="small" style="margin-top:.5em">Em Araçatuba, a distância para a CAMF diminuiu.</p>
+        <p class="small" style="margin-top:.5em">ChatGPT e Perplexity indicam mais a DCS do que em outubro.</p>
+      </div>
+      <div class="glass rv d4">
+        <p class="mono mag">Ainda não dá para afirmar</p><hr class="gold-rule">
+        <p class="small">Que houve crescimento geral: o total ficou estável.</p>
+        <p class="small" style="margin-top:.5em">Que uma ação específica causou cada variação.</p>
+        <p class="small" style="margin-top:.5em">Que o resultado de um dia vale para o mês inteiro: cada IA foi consultada uma vez por pergunta.</p>
+      </div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d5 small muted">Medição de laboratório, por API, com busca na web ligada em todas as IAs. O aplicativo que o paciente usa no celular pode responder de forma diferente. As respostas completas ficam arquivadas e podem ser consultadas.</p>
+  </div>
+</section>
+
+<!-- 09 PRÓXIMOS PASSOS -->
+<section class="slide" id="s9">
+  <span class="rfp-ref">// próximo ciclo</span>
+  <div class="slide-content">
+    <p class="kicker rv d1">// o que fazemos agora</p>
+    <h2 class="rv d2">Recuperar o Claude e Birigui<br>sem perder o que <span class="hl">já foi ganho</span>.</h2>
+    <div style="height:var(--content-gap)"></div>
+    <div class="grid g3" id="frentes">
+      <div class="glass rv d3"><p class="mono hl">01 · campo aberto</p><hr class="gold-rule"><p class="small">Deixar explícito na página inicial e na página de Araçatuba que a DCS tem ressonância de campo aberto em Araçatuba, com o modelo do aparelho e para quem ela é indicada.</p></div>
+      <div class="glass rv d3"><p class="mono hl">02 · provas</p><hr class="gold-rule"><p class="small">As IAs recomendam CAMF por "desde 2000", Tomoson por "3T", CDI por "ISO 9001". A DCS precisa publicar fatos verificáveis do mesmo tipo e reunir avaliações de pacientes.</p></div>
+      <div class="glass rv d4"><p class="mono hl">03 · diretórios</p><hr class="gold-rule"><p class="small">Completar as fichas nos guias que as IAs passaram a ler, como Doctoralia e Solutudo, com os mesmos dados do site.</p></div>
+      <div class="glass rv d4"><p class="mono hl">04 · cadastros</p><hr class="gold-rule"><p class="small">Corrigir dados errados que circulam: um endereço antigo de CNPJ citado pelo ChatGPT, uma ficha que classifica a DCS como laboratório e mamografia atribuída à unidade de Araçatuba.</p></div>
+      <div class="glass rv d5"><p class="mono hl">05 · páginas de exame</p><hr class="gold-rule"><p class="small">Fazer as páginas de cada exame chegarem às IAs. Hoje, Claude e Perplexity quase só leem a página inicial.</p></div>
+      <div class="glass rv d5"><p class="mono hl">06 · o que falta</p><hr class="gold-rule"><p class="small">Criar páginas para convênios por cidade e para ultrassom em Araçatuba, perguntas em que nenhuma página da DCS aparece hoje.</p></div>
+    </div>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d6 small muted">Sem mexer no que funciona: no Gemini o site da DCS foi fonte em 30 de 30 respostas, então os endereços atuais das páginas ficam como estão. Próxima remedição com a mesma régua em dezembro, para separar tendência de oscilação.</p>
+  </div>
+</section>
+
+<!-- 10 CONTRACAPA -->
+<section class="slide" id="s10">
+  <div class="bg-tex dim"><img src="img/fim.webp" alt=""></div>
+  <div class="slide-content">
+    <p class="kicker rv d1">// citável</p>
+    <h1 class="rv d2" style="font-size:clamp(1.8rem,4.4vw,3.8rem)">Quando alguém pergunta<br>onde fazer o exame,<br><span class="hl">a resposta precisa ser DCS.</span></h1>
+    <div style="height:var(--content-gap)"></div>
+    <p class="rv d4 small muted">Relatório de remedição competitiva · 16/11/2026 · comparado à medição de 15/10/2026<br>
+    <span class="logo-word" style="font-size:1.3em">CITÁVEL</span> <span class="mono" style="color:var(--zinc-500)">· reputação de marcas em IA · Grupo Desigual</span></p>
+  </div>
+</section>
+
+<nav class="nav-dots" id="dots" aria-label="Navegação de slides"></nav>
+<div class="slide-counter" id="counter">01 / 10</div>
+
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  const dots=document.getElementById('dots'),counter=document.getElementById('counter'),progress=document.getElementById('progress');
+  let current=0;
+  slides.forEach((s,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Slide '+(i+1));
+    b.addEventListener('click',()=>slides[i].scrollIntoView({behavior:'smooth'}));dots.appendChild(b)});
+  const dotBtns=[...dots.children];
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
+    current=slides.indexOf(e.target);
+    counter.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+    progress.style.width=((current+1)/slides.length*100)+'%';
+    dotBtns.forEach((d,i)=>d.classList.toggle('active',i===current))}})},{threshold:.35});
+  slides.forEach(s=>io.observe(s));
+  function go(n){slides[Math.max(0,Math.min(slides.length-1,n))].scrollIntoView({behavior:'smooth'})}
+  addEventListener('keydown',e=>{
+    if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(current+1)}
+    if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(current-1)}
+    if(e.key==='Home'){e.preventDefault();go(0)}if(e.key==='End'){e.preventDefault();go(slides.length-1)}});
+})();
+</script>
+</body>
+</html>
